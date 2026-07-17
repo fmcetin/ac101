@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Dr Furkan Çetin">
+<meta name="dcterms.date" content="2026-07-16">
+
+<title>Session 4 — Decision Making &amp; Relevant Costs – AC101 — Management Accounting and Data-Driven Decision Making</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ef683187e0e68ee1592ce1d995d44e5e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-2ade7b570da940105670a9c06e8385f5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">AC101 — Management Accounting and Data-Driven Decision Making</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-sessions" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Sessions</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-sessions">    
+        <li>
+    <a class="dropdown-item" href="../../sessions/01-cost-management/index.html">
+ <span class="dropdown-text">1: Cost Management</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../sessions/02-cost-estimation/index.html">
+ <span class="dropdown-text">2: Cost Estimation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../sessions/03-cost-allocation/index.html">
+ <span class="dropdown-text">3: Cost Allocation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../sessions/04-decision-making/index.html">
+ <span class="dropdown-text">4: Decision Making</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../sessions/05-variance/index.html">
+ <span class="dropdown-text">5: Variance Analysis</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../data.html"> 
+<span class="menu-text">Data</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sec-gates" id="toc-sec-gates" class="nav-link active" data-scroll-target="#sec-gates">Which costs actually matter?</a>
+  <ul class="collapse">
+  <li><a href="#sunk-costs-the-6.2-bn-goes-in-the-bin" id="toc-sunk-costs-the-6.2-bn-goes-in-the-bin" class="nav-link" data-scroll-target="#sunk-costs-the-6.2-bn-goes-in-the-bin">Sunk costs: the $6.2 bn goes in the bin</a></li>
+  <li><a href="#opportunity-costs-the-invisible-cost-that-is-relevant" id="toc-opportunity-costs-the-invisible-cost-that-is-relevant" class="nav-link" data-scroll-target="#opportunity-costs-the-invisible-cost-that-is-relevant">Opportunity costs: the invisible cost that <em>is</em> relevant</a></li>
+  </ul></li>
+  <li><a href="#sec-drop" id="toc-sec-drop" class="nav-link" data-scroll-target="#sec-drop">The first decision — keep or drop?</a></li>
+  <li><a href="#sec-decisions" id="toc-sec-decisions" class="nav-link" data-scroll-target="#sec-decisions">The two classic decisions</a>
+  <ul class="collapse">
+  <li><a href="#make-or-buy-teslas-batteries" id="toc-make-or-buy-teslas-batteries" class="nav-link" data-scroll-target="#make-or-buy-teslas-batteries">Make or buy: Tesla’s batteries</a>
+  <ul class="collapse">
+  <li><a href="#the-twist-the-same-cost-a-different-question" id="toc-the-twist-the-same-cost-a-different-question" class="nav-link" data-scroll-target="#the-twist-the-same-cost-a-different-question">The twist: the same cost, a different question</a></li>
+  </ul></li>
+  <li><a href="#special-orders-the-trap-of-full-cost" id="toc-special-orders-the-trap-of-full-cost" class="nav-link" data-scroll-target="#special-orders-the-trap-of-full-cost">Special orders: the trap of “full cost”</a>
+  <ul class="collapse">
+  <li><a href="#the-hinge-spare-capacity" id="toc-the-hinge-spare-capacity" class="nav-link" data-scroll-target="#the-hinge-spare-capacity">The hinge: spare capacity</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#sec-mix" id="toc-sec-mix" class="nav-link" data-scroll-target="#sec-mix">Who gets the scarce hour?</a>
+  <ul class="collapse">
+  <li><a href="#product-mix-under-one-binding-constraint" id="toc-product-mix-under-one-binding-constraint" class="nav-link" data-scroll-target="#product-mix-under-one-binding-constraint">Product mix under one binding constraint</a></li>
+  <li><a href="#two-constraints-when-ranking-stops-working" id="toc-two-constraints-when-ranking-stops-working" class="nav-link" data-scroll-target="#two-constraints-when-ranking-stops-working">▸ Two constraints: when ranking stops working</a></li>
+  </ul></li>
+  <li><a href="#sec-drill" id="toc-sec-drill" class="nav-link" data-scroll-target="#sec-drill">Your turn — the exam’s shape, cold</a>
+  <ul class="collapse">
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">Key takeaways</a></li>
+  </ul></li>
+  <li><a href="#sec-stretch" id="toc-sec-stretch" class="nav-link" data-scroll-target="#sec-stretch">▸ Beyond the core</a>
+  <ul class="collapse">
+  <li><a href="#vw-emden-when-the-model-meets-reality" id="toc-vw-emden-when-the-model-meets-reality" class="nav-link" data-scroll-target="#vw-emden-when-the-model-meets-reality">VW Emden: when the model meets reality</a></li>
+  <li><a href="#coming-next-session-5" id="toc-coming-next-session-5" class="nav-link" data-scroll-target="#coming-next-session-5">Coming next → Session 5</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Session 4 — Decision Making &amp; Relevant Costs</h1>
+<p class="subtitle lead">Should Tesla make its own batteries — and which costs actually matter?</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dr Furkan Çetin </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 16, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><a href="https://colab.research.google.com/github/fmcetin/ac101/blob/gh-pages/notebooks/ac101-s04.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open in Colab"></a> <em>— open today’s notebook in your browser and run along (no install needed)</em></p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>The case — <em>Five Days at Fremont</em> — <a href="tesla-case-part-d.pdf">Part D (PDF)</a>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Today is <strong>Part D — “Thursday: make or buy — the battery question”</strong>: a board memo whose arithmetic is right and whose reasoning is the week’s most instructive mistake, a midday special order, and a late-afternoon widening. It is <strong>read during the flip-the-decisions hands-on</strong>; in the final block <strong>groups work all seven questions in order</strong> (D1–D4, ▸ D5, D6, ▸ D7), and the closing discussion takes <strong>every question, in order, with its full solution</strong>. Every part is on Moodle; each day’s part is posted here after its lecture.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Opening quiz — Session 3 + Class 3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Five questions on yesterday — the lecture <em>and</em> the class. One best answer each; write your letters (or vote on Menti in the room), then check the reveal. <em>Formative only — not graded, no effect on your grade.</em></p>
+<ol type="1">
+<li>A factory makes two products: a simple, high-volume model and a complex, low-volume model. All overhead is spread using a single plant-wide rate per unit. Which statement best describes the likely effect on each model’s reported cost?
+<ul>
+<li><strong>A.</strong> The complex, low-volume model is under-costed and the simple, high-volume model is over-costed.</li>
+<li><strong>B.</strong> The simple, high-volume model is under-costed and the complex, low-volume model is over-costed.</li>
+<li><strong>C.</strong> Both models are under-costed, because a single plant-wide rate always leaves some overhead unallocated.</li>
+<li><strong>D.</strong> Neither model is mis-costed, because the same total overhead is allocated whichever method is used.</li>
+</ul></li>
+<li>Fretwork Guitars builds 6,000 guitars a year across two models. Its machining cost pool costs £240,000 a year, and the two models together use 16,000 machine-hours. A Stage model needs 4 machine-hours per guitar. Under activity-based costing, how much machining overhead is charged to each Stage guitar? A. £15 B. £40 C. £60 D. £160</li>
+<li>Under Harbourline Luggage’s new ABC system, its trunk line shows a full cost of £310 per trunk against a selling price of £280. The trunks share the factory building, cutting tables and stitching machines with the firm’s other product lines. Which statement best evaluates the proposal to drop the trunk line on these figures?
+<ul>
+<li><strong>A.</strong> There is no danger — removing a product that loses £30 on every unit sold must increase total profit.</li>
+<li><strong>B.</strong> ABC systematically overstates overhead, so the trunk line is in fact profitable as reported.</li>
+<li><strong>C.</strong> The overhead already spent on the trunk line is sunk, so the line must be kept until that spending is recovered.</li>
+<li><strong>D.</strong> Most of the allocated overhead is shared, committed cost that would simply reload onto the surviving lines.</li>
+</ul></li>
+<li>Aurora Pianos reports profit per unit after all costs: £900 on each grand piano and £150 on each digital keyboard. It sells 200 grands and 3,000 keyboards a year. Which statement best identifies the company’s profit engine?
+<ul>
+<li><strong>A.</strong> Grand pianos — £900 per unit is six times the keyboards’ £150 per unit.</li>
+<li><strong>B.</strong> Keyboards — they earn £450,000 of total profit against £180,000 from grands.</li>
+<li><strong>C.</strong> The two lines are equal in total, because allocation changes the distribution of profit, not the total.</li>
+<li><strong>D.</strong> The lines cannot be ranked without knowing each product’s break-even volume.</li>
+</ul></li>
+<li>Ridgeway Kayaks’ machine set-up cost pool is £54,000 a year; 45 production runs are performed. Its Expedition model uses 20 of the runs, and 1,500 Expedition kayaks are made a year. Under activity-based costing, the set-up overhead charged to each Expedition kayak is: A. £16 B. £36 C. £1,200 D. £24,000</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Reveal
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>A</strong> — the complex model’s batch- and product-level costs get diluted across every unit made: high-volume simple products subsidise low-volume complex ones (<strong>cross-subsidisation</strong>).</li>
+<li><strong>C</strong> — rate = £240,000 ÷ 16,000 = £15 per machine-hour; 4 hours × £15 = £60. (£40 is the plant-wide volume rate — not ABC.)</li>
+<li><strong>D</strong> — allocated ≠ avoidable: the building, tables and machines stay, so their overhead reloads onto the survivors — step one of the <strong>death spiral</strong>.</li>
+<li><strong>B</strong> — total profit = per-unit profit × volume: £450,000 versus £180,000. “Most profitable per unit” and “where the money is” are different questions.</li>
+<li><strong>A</strong> — £54,000 ÷ 45 = £1,200 per run; × 20 runs = £24,000; ÷ 1,500 kayaks = <strong>£16</strong>. (£36 ignores the driver; £1,200 stops at the rate; £24,000 forgets to divide by the kayaks.)</li>
+</ol>
+<p>Question 3 ended on the real issue: not what a product is <em>charged</em>, but which costs actually <em>disappear</em> if you act. That question — relevance — is today. ↓</p>
+</div>
+</div>
+</div>
+<hr>
+<section id="sec-gates" class="level1">
+<h1>Which costs actually matter?</h1>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>A tempting (and wrong) argument
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p><em>“Our batteries cost $79/kWh at full cost; buying from Panasonic lands at $90. So make them ourselves — we save $11.”</em></p>
+</blockquote>
+<p>It sounds fine. It can be exactly backwards. The fix is one idea.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Define it well — the relevant-cost principle
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A cost is <strong>relevant</strong> to a decision only if it is <strong>both</strong>:</p>
+<ol type="1">
+<li><strong>Future</strong> — it hasn’t happened yet (you can still change it), and</li>
+<li><strong>Different</strong> between the alternatives — if a cost is the same whichever way you choose, it can’t help you choose.</li>
+</ol>
+<p><span class="math display">\[\text{Relevant} = \text{Future} \;\textbf{and}\; \text{Differs between alternatives}\]</span></p>
+<p>Everything else — however large — is noise for <em>this</em> decision.</p>
+</div>
+</div>
+<div id="cell-fig-relevant-flow" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div id="fig-relevant-flow" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-relevant-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-relevant-flow-output-1.png" width="1335" height="465" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-relevant-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Two gates. A cost that fails either one is noise for this decision.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="sunk-costs-the-6.2-bn-goes-in-the-bin" class="level2">
+<h2 class="anchored" data-anchor-id="sunk-costs-the-6.2-bn-goes-in-the-bin">Sunk costs: the $6.2 bn goes in the bin</h2>
+<p>A <strong>sunk cost</strong> is money already spent that you can’t get back. It fails gate 1, so by the rule it’s <strong>never relevant</strong> — no matter how big or how painful.</p>
+<ul>
+<li>Gigafactory Nevada: Tesla reported <strong>$6.2bn invested by early 2023</strong>, with a <strong>$3.6bn expansion</strong> underway — real figures, from Tesla’s own reporting.</li>
+<li>Make batteries there or buy from Panasonic — <strong>that money is gone either way</strong> → sunk. It must not touch the make-or-buy decision.</li>
+<li>What <em>can</em> still matter is the factory’s <strong>resale value</strong>, or what else the space could earn — see opportunity cost, next.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Predict (show of hands)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Hypothetical scenario:</strong> Tesla has spent <strong>$200m</strong> developing a new battery design — and it doesn’t work. A competitor offers a working alternative for <strong>$150m</strong>. What should Tesla do?</p>
+<ol type="a">
+<li>keep trying — we’ve already spent $200m · (b) buy the alternative — the $200m is sunk · (c) keep trying — $200m &gt; $150m · (d) negotiate to split the costs</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Misconception check — the sunk-cost <em>fallacy</em>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Hands up for (a) or (c)? Both are the same error: the $200m is gone under <em>every</em> option, so it can’t help you choose. “We’ve spent so much, we can’t stop now” feels responsible; whether you’ve sunk $5 or $6bn changes <em>nothing</em> about which choice is best <strong>from here</strong>. The same instinct at human scale: finishing a terrible film because you’re an hour in; eating past full because you paid. The textbook demonstration — Arkes &amp; Blumer (1985): theatre-goers randomly given a <em>discounted</em> season ticket went to fewer plays than those who paid full price — the more people had sunk, the more they showed up to “not waste” it. Economists’ nickname for the error is the <strong>Concorde fallacy</strong> — the British and French governments kept funding a supersonic jet everyone knew would never pay back; a monument to sunk-cost thinking at Mach 2. Future-and-differs only.</p>
+</div>
+</div>
+</section>
+<section id="opportunity-costs-the-invisible-cost-that-is-relevant" class="level2">
+<h2 class="anchored" data-anchor-id="opportunity-costs-the-invisible-cost-that-is-relevant">Opportunity costs: the invisible cost that <em>is</em> relevant</h2>
+<p>An <strong>opportunity cost</strong> is the value of the <strong>best alternative you give up</strong>. It’s future, and it differs between options — so it’s <strong>relevant</strong> — but there’s no invoice for it, so it’s the cost managers most often miss.</p>
+<blockquote class="blockquote">
+<p>If Tesla uses the Gigafactory floor to build batteries, it <em>can’t</em> use that floor for <strong>Megapacks</strong> — Tesla’s grid-scale battery-storage product, sold to utilities: ~3.9 MWh a unit, a battery the size of a shipping container. The Megapack profit it forgoes is a real cost of making batteries — even though no one writes it down.</p>
+</blockquote>
+<p>The pattern to remember: <strong>sunk costs are visible but irrelevant; opportunity costs are invisible but relevant.</strong> We weight them exactly backwards by instinct.</p>
+<div id="cell-fig-quadrant" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div id="fig-quadrant" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-quadrant-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-quadrant-output-1.png" width="1185" height="735" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-quadrant-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Visibility and relevance are different axes — and the two costs that trip managers up sit in opposite corners.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-drop" class="level1">
+<h1>The first decision — keep or drop?</h1>
+<p>Wednesday ended on a question no allocation could answer: <strong>which costs actually disappear if you act?</strong> Firms face it constantly — and not only about products. In 2009 American Express offered some cardholders <strong>$300 to pay off their balance and close their accounts</strong>: <a href="https://www.wsj.com/articles/BL-WALETB-1596">American Express Paying Customers $300 To Leave</a> (<em>WSJ</em>, 23 February 2009). A customer is a cost object too — and Amex had judged that what some accounts <em>contributed</em> was less than what they <em>caused</em>.</p>
+<p>How would you check that? With the gates.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Commit — the customer report
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Hypothetical scenario:</strong> Fenice Stageworks builds stage sets for three opera houses — Lucrezia, Borgia and Rigo-Letto. Its annual report by customer:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>£</th>
+<th style="text-align: right;">Lucrezia</th>
+<th style="text-align: right;">Borgia</th>
+<th style="text-align: right;">Rigo-Letto</th>
+<th style="text-align: right;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Revenues</td>
+<td style="text-align: right;">500,000</td>
+<td style="text-align: right;">320,000</td>
+<td style="text-align: right;">390,000</td>
+<td style="text-align: right;">1,210,000</td>
+</tr>
+<tr class="even">
+<td>Materials</td>
+<td style="text-align: right;">370,000</td>
+<td style="text-align: right;">220,000</td>
+<td style="text-align: right;">330,000</td>
+<td style="text-align: right;">920,000</td>
+</tr>
+<tr class="odd">
+<td>Materials-handling labour <em>(variable)</em></td>
+<td style="text-align: right;">41,000</td>
+<td style="text-align: right;">18,000</td>
+<td style="text-align: right;">33,000</td>
+<td style="text-align: right;">92,000</td>
+</tr>
+<tr class="even">
+<td>Machine depreciation <em>(fixed)</em></td>
+<td style="text-align: right;">10,000</td>
+<td style="text-align: right;">6,000</td>
+<td style="text-align: right;">8,000</td>
+<td style="text-align: right;">24,000</td>
+</tr>
+<tr class="odd">
+<td>Factory rent <em>(fixed, shared)</em></td>
+<td style="text-align: right;">16,000</td>
+<td style="text-align: right;">10,000</td>
+<td style="text-align: right;">10,000</td>
+<td style="text-align: right;">36,000</td>
+</tr>
+<tr class="even">
+<td>Customer marketing <em>(variable)</em></td>
+<td style="text-align: right;">11,000</td>
+<td style="text-align: right;">9,000</td>
+<td style="text-align: right;">12,000</td>
+<td style="text-align: right;">32,000</td>
+</tr>
+<tr class="odd">
+<td>Order-processing labour <em>(variable)</em></td>
+<td style="text-align: right;">13,000</td>
+<td style="text-align: right;">7,000</td>
+<td style="text-align: right;">12,000</td>
+<td style="text-align: right;">32,000</td>
+</tr>
+<tr class="even">
+<td>Sales commissions <em>(variable)</em></td>
+<td style="text-align: right;">5,000</td>
+<td style="text-align: right;">3,000</td>
+<td style="text-align: right;">2,000</td>
+<td style="text-align: right;">10,000</td>
+</tr>
+<tr class="odd">
+<td>Unallocated SG&amp;A <em>(fixed)</em></td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">38,000</td>
+</tr>
+<tr class="even">
+<td><strong>Operating income</strong></td>
+<td style="text-align: right;"><strong>34,000</strong></td>
+<td style="text-align: right;"><strong>47,000</strong></td>
+<td style="text-align: right;"><strong>(17,000)</strong></td>
+<td style="text-align: right;"><strong>26,000</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>The machines have no resale value or alternative use; the rent is a shared lease that continues either way.</em></p>
+<p>Rigo-Letto reports a <strong>£17,000 loss</strong>. Drop the account? Name the costs your decision actually saves — then check the reveal.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Reveal
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="fenice-drop" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>rev <span class="op">=</span> <span class="dv">390_000</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>avoidable <span class="op">=</span> <span class="dv">330_000</span> <span class="op">+</span> <span class="dv">33_000</span> <span class="op">+</span> <span class="dv">12_000</span> <span class="op">+</span> <span class="dv">12_000</span> <span class="op">+</span> <span class="dv">2_000</span>   <span class="co"># materials, handling, marketing, orders, commissions</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>committed <span class="op">=</span> <span class="dv">8_000</span> <span class="op">+</span> <span class="dv">10_000</span>                                <span class="co"># machine depreciation, rent — stay and re-spread</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Avoidable contribution of Rigo-Letto = </span><span class="sc">{</span>rev<span class="sc">:,}</span><span class="ss"> − </span><span class="sc">{</span>avoidable<span class="sc">:,}</span><span class="ss"> = </span><span class="sc">{</span>rev <span class="op">-</span> avoidable<span class="sc">:+,}</span><span class="ss"> per year"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Committed cost that stays            = </span><span class="sc">{</span>committed<span class="sc">:,}</span><span class="ss">"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Reported operating income            = </span><span class="sc">{</span>rev <span class="op">-</span> avoidable <span class="op">-</span> committed<span class="sc">:+,}</span><span class="ss">"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Company profit if dropped: 26,000 → </span><span class="sc">{</span><span class="dv">26_000</span> <span class="op">-</span> (rev <span class="op">-</span> avoidable)<span class="sc">:,}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Avoidable contribution of Rigo-Letto = 390,000 − 389,000 = +1,000 per year
+Committed cost that stays            = 18,000
+Reported operating income            = -17,000
+
+Company profit if dropped: 26,000 → 25,000</code></pre>
+</div>
+</div>
+<p>The account genuinely contributes <strong>+£1,000 a year</strong>: the reported −£17,000 is exactly +£1,000 of avoidable contribution minus £18,000 of committed cost that survives the drop and re-spreads over the other two customers. Dropping Rigo-Letto cuts total profit by £1,000 — the “loss” was an allocation artefact.</p>
+<p>And £1,000 is thin: the real question is one no report prints — what else could the freed capacity earn? A better customer in the wings is an <strong>opportunity cost</strong> of keeping Rigo-Letto; <em>that</em>, not the −£17,000, would be the honest case for dropping.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Define it well — avoidable cost
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <strong>avoidable costs</strong> of a decision are the ones that genuinely stop when you act. A keep-or-drop compares the <strong>contribution you lose</strong> with the <strong>costs that actually disappear</strong> — allocated and committed lines that survive the drop never count, however large they look on the report. Run “drop the weakest” on <em>allocated</em> numbers and you feed the <strong>death spiral</strong>; run it on <em>avoidable</em> numbers and it tells the truth.</p>
+</div>
+</div>
+<p><strong>This afternoon:</strong> Class 4 hands you Starkuchen’s carrot cake — Wednesday’s “should they drop it?” — and you now own the tool for it.</p>
+<hr>
+<p><em>(Natural break point — ~10 minutes.)</em></p>
+<hr>
+</section>
+<section id="sec-decisions" class="level1">
+<h1>The two classic decisions</h1>
+<section id="make-or-buy-teslas-batteries" class="level2">
+<h2 class="anchored" data-anchor-id="make-or-buy-teslas-batteries">Make or buy: Tesla’s batteries</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>In Excel (same answers, live formulas)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Download <a href="ac101-s4-relevant-costs.xlsx"><strong>ac101-s4-relevant-costs.xlsx</strong></a>: five tabs — make-or-buy (marginal saving, expansion break-even, the strategic twist), the special-order full-cost-vs-relevant trap, the product-mix bottleneck ranking, and a <strong>Solver tab</strong> for the two-constraint mix in the stretch section below. Change an input and watch the decision flip.</p>
+</div>
+</div>
+</div>
+<div id="load-battery" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> pd.read_csv(<span class="st">'../../data/simulated/battery_make_vs_buy.csv'</span>).set_index(<span class="st">'cost_component'</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>make_var <span class="op">=</span> b.loc[<span class="st">'total_variable'</span>, <span class="st">'in_house_per_kwh'</span>]      <span class="co"># $/kWh incremental in-house</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>buy_var  <span class="op">=</span> b.loc[<span class="st">'total_variable'</span>, <span class="st">'panasonic_per_kwh'</span>]     <span class="co"># $/kWh from Panasonic, landed</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>buy_quote <span class="op">=</span> b.loc[<span class="st">'purchase_price'</span>, <span class="st">'panasonic_per_kwh'</span>]    <span class="co"># Panasonic's quoted price</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>buy_ship  <span class="op">=</span> b.loc[<span class="st">'logistics'</span>, <span class="st">'panasonic_per_kwh'</span>]         <span class="co"># transport &amp; handling</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>make_fix <span class="op">=</span> b.loc[<span class="st">'annual_fixed_cost_millions'</span>, <span class="st">'in_house_per_kwh'</span>]   <span class="co"># $m/yr existing fixed</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>prod <span class="op">=</span> pd.read_csv(<span class="st">'../../data/simulated/product_activity_drivers.csv'</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>demand_kwh <span class="op">=</span> (prod[<span class="st">'annual_volume_fremont'</span>] <span class="op">*</span> prod[<span class="st">'kwh_capacity'</span>]).<span class="bu">sum</span>()</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"In-house variable cost    : $</span><span class="sc">{</span>make_var<span class="sc">:.0f}</span><span class="ss"> / kWh"</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Buy from Panasonic, landed: $</span><span class="sc">{</span>buy_var<span class="sc">:.0f}</span><span class="ss"> / kWh  (= $</span><span class="sc">{</span>buy_quote<span class="sc">:.0f}</span><span class="ss"> price + $</span><span class="sc">{</span>buy_ship<span class="sc">:.0f}</span><span class="ss"> logistics)"</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"In-house existing fixed   : $</span><span class="sc">{</span>make_fix<span class="sc">:,.0f}</span><span class="ss"> m / year"</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Tesla's battery demand    : </span><span class="sc">{</span>demand_kwh<span class="op">/</span><span class="fl">1e6</span><span class="sc">:.1f}</span><span class="ss"> m kWh / year"</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Naive 'full cost' in-house = </span><span class="sc">{</span>make_var<span class="sc">:.0f}</span><span class="ss"> + </span><span class="sc">{</span>make_fix<span class="sc">:,.0f}</span><span class="ss">m/</span><span class="sc">{</span>demand_kwh<span class="op">/</span><span class="fl">1e6</span><span class="sc">:.1f}</span><span class="ss">m "</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"= $</span><span class="sc">{</span>make_var <span class="op">+</span> make_fix<span class="op">*</span><span class="fl">1e6</span><span class="op">/</span>demand_kwh<span class="sc">:.0f}</span><span class="ss">/kWh  vs buy $</span><span class="sc">{</span>buy_var<span class="sc">:.0f}</span><span class="ss">/kWh"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>In-house variable cost    : $70 / kWh
+Buy from Panasonic, landed: $90 / kWh  (= $85 price + $5 logistics)
+In-house existing fixed   : $800 m / year
+Tesla's battery demand    : 87.7 m kWh / year
+
+Naive 'full cost' in-house = 70 + 800m/87.7m = $79/kWh  vs buy $90/kWh</code></pre>
+</div>
+</div>
+<p><em>Scope note: these are battery-<strong>cell</strong> costs (simulated data). Industry headlines usually quote <strong>pack</strong>-level prices (~$115–140/kWh, BloombergNEF 2024), which add pack assembly, housing and battery management on top of the cell — a different scope, so don’t compare the two.</em></p>
+<p>So far in-house even <em>looks</em> cheaper on full cost. But the real decision is usually <strong>“should we make the <em>next</em> batch in-house, or buy it?”</strong> — and for that, the existing $800m fixed cost is <strong>irrelevant — it’s there whichever way you choose, so it fails the “differs” test</strong> (the truly <em>sunk</em> cost is the ~$6.2bn build):</p>
+<div id="make-buy-incremental" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>saving <span class="op">=</span> buy_var <span class="op">-</span> make_var</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>new_line_fixed <span class="op">=</span> <span class="dv">400</span>          <span class="co"># $m/yr for a NEW line (illustrative)</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>be_kwh <span class="op">=</span> new_line_fixed <span class="op">*</span> <span class="fl">1e6</span> <span class="op">/</span> saving</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"EXISTING line : make $</span><span class="sc">{</span>make_var<span class="sc">:.0f}</span><span class="ss"> vs buy $</span><span class="sc">{</span>buy_var<span class="sc">:.0f}</span><span class="ss">/kWh  →  making saves $</span><span class="sc">{</span>saving<span class="sc">:.0f}</span><span class="ss">/kWh"</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"NEW $</span><span class="sc">{</span>new_line_fixed<span class="sc">}</span><span class="ss">m/yr line: break-even = $</span><span class="sc">{</span>new_line_fixed<span class="sc">}</span><span class="ss">m / $</span><span class="sc">{</span>saving<span class="sc">:.0f}</span><span class="ss"> = </span><span class="sc">{</span>be_kwh<span class="op">/</span><span class="fl">1e6</span><span class="sc">:.0f}</span><span class="ss">m kWh of extra demand"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>EXISTING line : make $70 vs buy $90/kWh  →  making saves $20/kWh
+NEW $400m/yr line: break-even = $400m / $20 = 20m kWh of extra demand</code></pre>
+</div>
+</div>
+<p>On the existing line the fixed cost is unchanged either way, so only the variable costs compare; a <strong>new</strong> line’s fixed cost <em>does</em> differ — hence the break-even:</p>
+<div id="cell-fig-breakeven" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>extra <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">40</span>, <span class="dv">200</span>)                       <span class="co"># extra demand, m kWh/yr</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>cost_buy  <span class="op">=</span> buy_var <span class="op">*</span> extra                           <span class="co"># $m/yr: variable only</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>cost_make <span class="op">=</span> new_line_fixed <span class="op">+</span> make_var <span class="op">*</span> extra         <span class="co"># $m/yr: new fixed + variable</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="fl">4.5</span>))</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>ax.plot(extra, cost_buy, color<span class="op">=</span>BLUE, lw<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="ss">f'BUY the extra (</span><span class="ch">\\</span><span class="ss">$</span><span class="sc">{</span>buy_var<span class="sc">:.0f}</span><span class="ss">/kWh, no new fixed)'</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>ax.plot(extra, cost_make, color<span class="op">=</span>TESLA_RED, lw<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="ss">f'MAKE on a new line (</span><span class="ch">\\</span><span class="ss">$</span><span class="sc">{</span>new_line_fixed<span class="sc">}</span><span class="ss">m fixed + </span><span class="ch">\\</span><span class="ss">$</span><span class="sc">{</span>make_var<span class="sc">:.0f}</span><span class="ss">/kWh)'</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>ax.axvline(be_kwh<span class="op">/</span><span class="fl">1e6</span>, color<span class="op">=</span><span class="st">'0.5'</span>, ls<span class="op">=</span><span class="st">'--'</span>, lw<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="ss">f'break-even ≈ </span><span class="sc">{</span>be_kwh<span class="op">/</span><span class="fl">1e6</span><span class="sc">:.0f}</span><span class="ss">m kWh'</span>, xy<span class="op">=</span>(be_kwh<span class="op">/</span><span class="fl">1e6</span>, buy_var<span class="op">*</span>be_kwh<span class="op">/</span><span class="fl">1e6</span>),</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>            xytext<span class="op">=</span>(<span class="dv">23</span>, <span class="dv">1150</span>), arrowprops<span class="op">=</span><span class="bu">dict</span>(arrowstyle<span class="op">=</span><span class="st">'-&gt;'</span>, color<span class="op">=</span><span class="st">'0.4'</span>))</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="dv">7</span>, <span class="dv">120</span>, <span class="st">'buy cheaper here'</span>, color<span class="op">=</span>BLUE, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="dv">27</span>, <span class="dv">120</span>, <span class="st">'make cheaper here'</span>, color<span class="op">=</span>TESLA_RED, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'extra battery demand (m kWh / year)'</span>)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'total cost of the extra ($m / year)'</span>)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>ax.legend(loc<span class="op">=</span><span class="st">'upper left'</span>)<span class="op">;</span> plt.tight_layout()<span class="op">;</span> plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="fig-breakeven" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-breakeven-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-breakeven-output-1.png" width="1187" height="660" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-breakeven-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Illustrative: a new $400m/yr line pays for itself only beyond ~20m kWh of extra demand — below that, buy the extra batteries.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Discussion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Put yourself in the CFO’s chair. So far the $800m has been <em>irrelevant</em> — it’s there whichever way the next batch goes. Now the board asks a bigger question: <strong>should Tesla be in the battery business at all, or outsource everything and clear the floor?</strong> Does the $800m still fail the “differs” test? And what happens to the floor?</p>
+</div>
+</div>
+<section id="the-twist-the-same-cost-a-different-question" class="level3">
+<h3 class="anchored" data-anchor-id="the-twist-the-same-cost-a-different-question">The twist: the same cost, a different question</h3>
+<p>For the <em>marginal</em> batch above, the $800m was <strong>irrelevant — it didn’t differ</strong>. But note <em>what</em> that $800m is: <strong>ongoing cash operating cost</strong> — utilities, maintenance, salaried staff, leases — <strong>not</strong> depreciation of the sunk ~$6.2bn build (that stays sunk forever). Now take the strategic question you just debated: should Tesla be in the battery business <em>at all</em>, or <strong>outsource entirely and repurpose the Gigafactory</strong>? For <em>that</em> decision the $800m of ongoing cash cost <strong>now differs — closing the line avoids it, so it becomes relevant</strong> — and the freed floor could earn ~$1.1bn/year in <strong>Megapack contribution</strong> (profit forgone, <em>not</em> revenue). <em>Same dollars, different relevance, because the decision changed:</em></p>
+<div id="make-buy-twist" class="cell" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>megapack_opp <span class="op">=</span> <span class="dv">1_100</span>         <span class="co"># $m/yr Megapack CONTRIBUTION forgone if floor stays in batteries (illustrative)</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>make_total <span class="op">=</span> make_var <span class="op">*</span> demand_kwh <span class="op">/</span> <span class="fl">1e6</span> <span class="op">+</span> make_fix          <span class="co"># variable + now-AVOIDABLE factory fixed</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>buy_total  <span class="op">=</span> buy_var  <span class="op">*</span> demand_kwh <span class="op">/</span> <span class="fl">1e6</span>                     <span class="co"># pure variable (factory closed)</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="st">''</span><span class="sc">:30}{</span><span class="st">'MAKE'</span><span class="sc">:&gt;12}{</span><span class="st">'BUY'</span><span class="sc">:&gt;12}</span><span class="ss">"</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="st">'Variable battery cost ($m)'</span><span class="sc">:30}{</span>make_var<span class="op">*</span>demand_kwh<span class="op">/</span><span class="fl">1e6</span><span class="sc">:&gt;12,.0f}{</span>buy_total<span class="sc">:&gt;12,.0f}</span><span class="ss">"</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="st">'Factory fixed — now avoidable'</span><span class="sc">:30}{</span>make_fix<span class="sc">:&gt;12,.0f}{</span><span class="dv">0</span><span class="sc">:&gt;12,.0f}</span><span class="ss">"</span>)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="st">'Opportunity cost (Megapacks)'</span><span class="sc">:30}{</span>megapack_opp<span class="sc">:&gt;12,.0f}{</span><span class="dv">0</span><span class="sc">:&gt;12,.0f}</span><span class="ss">"</span>)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="st">'= relevant total ($m)'</span><span class="sc">:30}{</span>make_total<span class="op">+</span>megapack_opp<span class="sc">:&gt;12,.0f}{</span>buy_total<span class="sc">:&gt;12,.0f}</span><span class="ss">"</span>)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>winner <span class="op">=</span> <span class="st">'MAKE'</span> <span class="cf">if</span> make_total <span class="op">+</span> megapack_opp <span class="op">&lt;</span> buy_total <span class="cf">else</span> <span class="st">'BUY'</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Relevant totals: MAKE $</span><span class="sc">{</span>make_total<span class="op">+</span>megapack_opp<span class="sc">:,.0f}</span><span class="ss">m vs BUY $</span><span class="sc">{</span>buy_total<span class="sc">:,.0f}</span><span class="ss">m  →  </span><span class="sc">{</span>winner<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                                      MAKE         BUY
+Variable battery cost ($m)           6,137       7,890
+Factory fixed — now avoidable          800           0
+Opportunity cost (Megapacks)         1,100           0
+= relevant total ($m)                8,037       7,890
+
+Relevant totals: MAKE $8,037m vs BUY $7,890m  →  BUY</code></pre>
+</div>
+</div>
+<p>Counting the avoidable factory cost <em>and</em> the forgone Megapack profit, the answer flips.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>The real-world answer: do both
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Tesla makes 4680 cells in-house <strong>and</strong> buys from Panasonic, LG and CATL. The numbers rarely settle it alone — <strong>qualitative</strong> factors decide the margin: supply security (don’t depend on one supplier), keeping battery tech proprietary, flexibility to scale. Relevant-cost analysis narrows the choice; judgement finishes it.</p>
+<p>The supply-security factor has a front page: in May 2017 a shortage of Bosch steering systems meant thousands of BMWs could not be built — <a href="https://www.ft.com/content/e09a322e-446a-11e7-8519-9f94ee97d996">BMW car production disrupted due to supply problems</a> (<em>FT</em>, 29 May 2017). Dependence on a single supplier is a cost that appears in no relevant-cost table until it lands all at once.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="special-orders-the-trap-of-full-cost" class="level2">
+<h2 class="anchored" data-anchor-id="special-orders-the-trap-of-full-cost">Special orders: the trap of “full cost”</h2>
+<p><strong>Hypothetical scenario:</strong> a rental company offers to buy <strong>50,000 Model 3</strong> at <strong>$30,000</strong> — below the $39,000 list. Accept?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>The cost card
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><em>Illustrative, simplified Model 3 costs:</em> variable cost <strong>$25,000</strong>/car; allocated fixed overhead <strong>$8,000</strong>/car → “full cost” <strong>$33,000</strong>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Commit to an answer
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Commit before the maths: <strong>accept or reject?</strong> And what’s the <strong>minimum price per car</strong> you’d take? Show of hands when time’s up — then hold your answer to one more question: <em>what would change your mind?</em></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Reveal
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="special-order" class="cell" data-execution_count="9">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>list_price, offer, vol <span class="op">=</span> <span class="dv">39_000</span>, <span class="dv">30_000</span>, <span class="dv">50_000</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>variable, alloc_fixed <span class="op">=</span> <span class="dv">25_000</span>, <span class="dv">8_000</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>full <span class="op">=</span> variable <span class="op">+</span> alloc_fixed</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"FULL-COST VIEW (the trap):"</span>)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  offer $</span><span class="sc">{</span>offer<span class="sc">:,}</span><span class="ss"> − full cost $</span><span class="sc">{</span>full<span class="sc">:,}</span><span class="ss"> = $</span><span class="sc">{</span>offer<span class="op">-</span>full<span class="sc">:+,}</span><span class="ss">/car  →  'reject!'</span><span class="ch">\n</span><span class="ss">"</span>)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"RELEVANT-COST VIEW (spare capacity):"</span>)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  offer $</span><span class="sc">{</span>offer<span class="sc">:,}</span><span class="ss"> − variable $</span><span class="sc">{</span>variable<span class="sc">:,}</span><span class="ss"> = $</span><span class="sc">{</span>offer<span class="op">-</span>variable<span class="sc">:+,}</span><span class="ss">/car contribution"</span>)</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  × </span><span class="sc">{</span>vol<span class="sc">:,}</span><span class="ss"> cars = $</span><span class="sc">{</span>(offer<span class="op">-</span>variable)<span class="op">*</span>vol<span class="op">/</span><span class="fl">1e6</span><span class="sc">:+,.0f}</span><span class="ss"> m  →  ACCEPT (with spare capacity)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>FULL-COST VIEW (the trap):
+  offer $30,000 − full cost $33,000 = $-3,000/car  →  'reject!'
+
+RELEVANT-COST VIEW (spare capacity):
+  offer $30,000 − variable $25,000 = $+5,000/car contribution
+  × 50,000 cars = $+250 m  →  ACCEPT (with spare capacity)</code></pre>
+</div>
+</div>
+<p>The $8,000 allocated fixed overhead is there with or without this order — it is not caused by the order, so it fails “differs”.</p>
+<div id="cell-fig-special" class="cell" data-execution_count="10">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="fl">4.2</span>))</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>].bar([<span class="st">'Offer'</span>, <span class="st">'Variable'</span>, <span class="st">'Fixed</span><span class="ch">\n</span><span class="st">(allocated)'</span>], [offer<span class="op">/</span><span class="dv">1000</span>, <span class="op">-</span>variable<span class="op">/</span><span class="dv">1000</span>, <span class="op">-</span>alloc_fixed<span class="op">/</span><span class="dv">1000</span>],</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>          color<span class="op">=</span>[GREEN, TESLA_RED, <span class="st">'#b08'</span>])<span class="op">;</span> ax[<span class="dv">0</span>].axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'k'</span>, lw<span class="op">=</span><span class="fl">.6</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>].set_title(<span class="ss">f'Full cost: </span><span class="sc">{</span>offer<span class="op">-</span>full<span class="sc">:+,}</span><span class="ss"> / car  → "reject"'</span>)<span class="op">;</span> ax[<span class="dv">0</span>].set_ylabel(<span class="st">'$000s/car'</span>)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>].bar([<span class="st">'Offer'</span>, <span class="st">'Variable'</span>, <span class="st">'Contribution'</span>], [offer<span class="op">/</span><span class="dv">1000</span>, <span class="op">-</span>variable<span class="op">/</span><span class="dv">1000</span>, (offer<span class="op">-</span>variable)<span class="op">/</span><span class="dv">1000</span>],</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>          color<span class="op">=</span>[GREEN, TESLA_RED, GREEN])<span class="op">;</span> ax[<span class="dv">1</span>].axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'k'</span>, lw<span class="op">=</span><span class="fl">.6</span>)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>].set_title(<span class="ss">f'Relevant cost: </span><span class="sc">{</span>offer<span class="op">-</span>variable<span class="sc">:+,}</span><span class="ss"> / car  → accept'</span>)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()<span class="op">;</span> plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="fig-special" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-special-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-special-output-1.png" width="1785" height="615" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-special-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Full cost says reject; relevant cost says accept — the fixed overhead is there either way.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="the-hinge-spare-capacity" class="level3">
+<h3 class="anchored" data-anchor-id="the-hinge-spare-capacity">The hinge: spare capacity</h3>
+<p>At <strong>full capacity</strong>, every special car displaces a normal $39,000 sale — and that displaced sale’s contribution is an opportunity cost:</p>
+<div id="capacity" class="cell" data-execution_count="11">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>reg_cm <span class="op">=</span> list_price <span class="op">-</span> variable        <span class="co"># contribution given up if a normal sale is displaced</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Opportunity cost = displaced contribution = $</span><span class="sc">{</span>reg_cm<span class="sc">:,}</span><span class="ss">/car"</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Special contribution $</span><span class="sc">{</span>offer<span class="op">-</span>variable<span class="sc">:,}</span><span class="ss"> &lt; $</span><span class="sc">{</span>reg_cm<span class="sc">:,}</span><span class="ss">  →  REJECT at full capacity"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Opportunity cost = displaced contribution = $14,000/car
+Special contribution $5,000 &lt; $14,000  →  REJECT at full capacity</code></pre>
+</div>
+</div>
+<p><strong>The rule:</strong> with <strong>spare capacity</strong>, accept if price &gt; <strong>variable cost</strong>; at <strong>full capacity</strong>, accept only if the special contribution beats the <strong>displaced</strong> contribution.</p>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Misconception check
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Both traps are the same mistake: letting a <strong>fixed/allocated</strong> cost (unchanged by this decision) drive a choice it doesn’t actually change. Strip to what’s <strong>future and differs</strong> — then, separately, ask whether <strong>capacity</strong> turns spare resources into an opportunity cost.</p>
+</div>
+</div>
+<hr>
+<p><em>(Natural break point — ~10 minutes.)</em></p>
+<hr>
+</section>
+</section>
+</section>
+<section id="sec-mix" class="level1">
+<h1>Who gets the scarce hour?</h1>
+<section id="product-mix-under-one-binding-constraint" class="level2">
+<h2 class="anchored" data-anchor-id="product-mix-under-one-binding-constraint">Product mix under one binding constraint</h2>
+<p>When the factory can’t build everything it could sell, which model gets the scarce resource? Not the one with the biggest margin per <em>car</em> — the one with the biggest margin per unit of the <strong>bottleneck</strong>.</p>
+<div id="product-mix" class="cell" data-execution_count="12">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Illustrative: the paint shop is the bottleneck.</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>mix <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Model'</span>:        [<span class="st">'Model 3'</span>, <span class="st">'Model Y'</span>],</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'CM per car'</span>:   [<span class="fl">14_000.0</span>, <span class="fl">18_000.0</span>],</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Paint hrs/car'</span>:[<span class="dv">2</span>,         <span class="dv">3</span>],</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>mix[<span class="st">'CM per paint-hour'</span>] <span class="op">=</span> mix[<span class="st">'CM per car'</span>] <span class="op">/</span> mix[<span class="st">'Paint hrs/car'</span>]</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mix.to_string(index<span class="op">=</span><span class="va">False</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Model  CM per car  Paint hrs/car  CM per paint-hour
+Model 3      14,000              2              7,000
+Model Y      18,000              3              6,000</code></pre>
+</div>
+</div>
+<p>Model Y earns more per <strong>car</strong> — but Model 3 earns more per <strong>bottleneck hour</strong>, so when paint-shop hours are the constraint, Model 3 gets them first. A lower per-car margin can still win.</p>
+</section>
+<section id="two-constraints-when-ranking-stops-working" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="two-constraints-when-ranking-stops-working">▸ Two constraints: when ranking stops working</h2>
+<p><strong>Hypothetical scenario:</strong> Mountain Goat Cycles makes two bike saddles:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: right;">Mountain</th>
+<th style="text-align: right;">Touring</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Contribution per unit</td>
+<td style="text-align: right;">£15</td>
+<td style="text-align: right;">£12</td>
+</tr>
+<tr class="even">
+<td>Stitching-machine time per unit</td>
+<td style="text-align: right;">2 min</td>
+<td style="text-align: right;">1 min</td>
+</tr>
+<tr class="odd">
+<td>Assembly labour per unit</td>
+<td style="text-align: right;">3 min</td>
+<td style="text-align: right;">3 min</td>
+</tr>
+<tr class="even">
+<td>Maximum demand</td>
+<td style="text-align: right;">4,000</td>
+<td style="text-align: right;">7,000</td>
+</tr>
+</tbody>
+</table>
+<p>Machine capacity is <strong>220 hours</strong> (13,200 minutes); a strike has cut assembly labour to <strong>500 hours</strong> (30,000 minutes). With the machine as the only worry, the ranking rule puts Touring first (£12 vs £7.50 per machine-minute). But now <strong>both constraints bind at once</strong> — rank by which? Neither: with several scarce resources, ranking gives an answer, not the <em>best</em> answer. Let a search do the work — Excel’s <strong>Solver</strong> (the companion’s “Product mix — Solver” tab walks it through), or one line of Python:</p>
+<div id="mg-linprog" class="cell" data-execution_count="13">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> linprog</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># max 15M + 12T  s.t.  labour 3M+3T ≤ 30,000 · machine 2M+T ≤ 13,200 · M ≤ 4,000 · T ≤ 7,000</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> linprog(c<span class="op">=</span>[<span class="op">-</span><span class="dv">15</span>, <span class="op">-</span><span class="dv">12</span>], A_ub<span class="op">=</span>[[<span class="dv">3</span>, <span class="dv">3</span>], [<span class="dv">2</span>, <span class="dv">1</span>]], b_ub<span class="op">=</span>[<span class="dv">30_000</span>, <span class="dv">13_200</span>],</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>              bounds<span class="op">=</span>[(<span class="dv">0</span>, <span class="dv">4_000</span>), (<span class="dv">0</span>, <span class="dv">7_000</span>)], method<span class="op">=</span><span class="st">'highs'</span>)</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>m_opt, t_opt <span class="op">=</span> res.x</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>rk_t <span class="op">=</span> <span class="dv">7_000</span><span class="op">;</span> rk_m <span class="op">=</span> <span class="bu">min</span>(<span class="dv">4_000</span>, (<span class="dv">30_000</span> <span class="op">-</span> <span class="dv">3</span><span class="op">*</span>rk_t)<span class="op">//</span><span class="dv">3</span>, (<span class="dv">13_200</span> <span class="op">-</span> rk_t)<span class="op">//</span><span class="dv">2</span>)   <span class="co"># rank by machine-minute</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>rl_m <span class="op">=</span> <span class="dv">4_000</span><span class="op">;</span> rl_t <span class="op">=</span> <span class="bu">min</span>(<span class="dv">7_000</span>, (<span class="dv">30_000</span> <span class="op">-</span> <span class="dv">3</span><span class="op">*</span>rl_m)<span class="op">//</span><span class="dv">3</span>, <span class="dv">13_200</span> <span class="op">-</span> <span class="dv">2</span><span class="op">*</span>rl_m)      <span class="co"># rank by labour-minute</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Optimal mix : </span><span class="sc">{</span>m_opt<span class="sc">:,.0f}</span><span class="ss"> Mountain + </span><span class="sc">{</span>t_opt<span class="sc">:,.0f}</span><span class="ss"> Touring  →  £</span><span class="sc">{</span><span class="op">-</span>res<span class="sc">.</span>fun<span class="sc">:,.0f}</span><span class="ss">"</span>)</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Rank by machine-minute (Touring first): £</span><span class="sc">{</span><span class="dv">12</span><span class="op">*</span>rk_t <span class="op">+</span> <span class="dv">15</span><span class="op">*</span>rk_m<span class="sc">:,.0f}</span><span class="ss">"</span>)</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Rank by labour-minute (Mountain first) : £</span><span class="sc">{</span><span class="dv">15</span><span class="op">*</span>rl_m <span class="op">+</span> <span class="dv">12</span><span class="op">*</span>rl_t<span class="sc">:,.0f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Optimal mix : 3,200 Mountain + 6,800 Touring  →  £129,600
+Rank by machine-minute (Touring first): £129,000
+Rank by labour-minute (Mountain first) : £122,400</code></pre>
+</div>
+</div>
+<p>At the optimum both constraints are exactly used up — the answer sits where the two limits cross, which no single-constraint ranking can find. <strong>One scarce resource → rank by contribution per unit of it. Several → optimise</strong> (Solver, <code>linprog</code>). Same data, same answer, either tool.</p>
+</section>
+</section>
+<section id="sec-drill" class="level1">
+<h1>Your turn — the exam’s shape, cold</h1>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Commit to numbers — Bluewater Boards
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Hypothetical scenario:</strong> Bluewater Boards builds paddleboards in Cornwall.</p>
+<p><strong>(a) Keep or drop.</strong> The <strong>Junior</strong> line’s monthly report: sales 400 boards at £62; variable cost £39 per board; allocated fixed costs £11,600, <strong>of which £1,800 is Junior-specific</strong> (a part-time finisher’s contract and Junior-only advertising) and would stop with the line; the remaining £9,800 would continue, re-spread over the other lines. <strong>Reported loss £(2,400).</strong> The monthly change in total profit if Junior is dropped — and the decision on financial grounds.</p>
+<p><strong>(b) Make or buy.</strong> Bluewater makes the 4,000 <strong>fin sets</strong> its boards need each year. The cost report shows <strong>£24 per set</strong>: materials £11 · labour £5 · variable overhead £2 · the salary of a dedicated moulding technician £2 (the role ends if production stops) · depreciation of the fin mould £1 (no resale value, no other use) · allocated factory overhead £3 (unchanged in total). A supplier offers identical sets at <strong>£21</strong>; the freed space would stand idle. The change in annual profit if Bluewater switches to buying.</p>
+<p><em>Calculator only — Section A asks these shapes as multiple-choice items, Section B as short scenarios.</em></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Reveal — (a) keep or drop
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="drill-a" class="cell" data-execution_count="14">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>cm <span class="op">=</span> <span class="dv">400</span> <span class="op">*</span> (<span class="dv">62</span> <span class="op">-</span> <span class="dv">39</span>)          <span class="co"># contribution that dies with the line</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>saving <span class="op">=</span> <span class="dv">1_800</span>                <span class="co"># the Junior-specific slice of the £11,600 that genuinely stops</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Contribution lost : −£</span><span class="sc">{</span>cm<span class="sc">:,}</span><span class="ss"> per month"</span>)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Specific saving   : +£</span><span class="sc">{</span>saving<span class="sc">:,}</span><span class="ss"> per month"</span>)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Change in profit  : £</span><span class="sc">{</span><span class="op">-</span>cm <span class="op">+</span> saving<span class="sc">:+,}</span><span class="ss"> per month  →  KEEP the line"</span>)</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Check: reported loss = </span><span class="sc">{</span>cm<span class="sc">:,}</span><span class="ss"> − 11,600 = </span><span class="sc">{</span>cm <span class="op">-</span> <span class="dv">11_600</span><span class="sc">:+,}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Contribution lost : −£9,200 per month
+Specific saving   : +£1,800 per month
+Change in profit  : £-7,400 per month  →  KEEP the line
+
+Check: reported loss = 9,200 − 11,600 = -2,400</code></pre>
+</div>
+</div>
+<p>The £(2,400) “loss” is £9,200 of real contribution buried under £11,600 of surviving allocation. <strong>The traps:</strong> “+£2,400 — the loss stops” treats the allocation as avoidable; “+£1,800” counts the saving and forgets the contribution it kills.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Reveal — (b) make or buy
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="drill-b" class="cell" data-execution_count="15">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>avoidable <span class="op">=</span> <span class="dv">11</span> <span class="op">+</span> <span class="dv">5</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span>    <span class="co"># materials, labour, variable OH, technician — all stop with production</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>survives  <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">3</span>             <span class="co"># mould depreciation (fails FUTURE) + allocation (fails DIFFERS)</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>buy <span class="op">=</span> <span class="dv">21</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Avoidable cost of making : £</span><span class="sc">{</span>avoidable<span class="sc">}</span><span class="ss"> per set"</span>)</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Survives either way      : £</span><span class="sc">{</span>survives<span class="sc">}</span><span class="ss"> per set  (× 4,000 = £</span><span class="sc">{</span>survives<span class="op">*</span><span class="dv">4_000</span><span class="sc">:,}</span><span class="ss"> the 'saving' never touches)"</span>)</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Buy at £</span><span class="sc">{</span>buy<span class="sc">}</span><span class="ss"> vs £</span><span class="sc">{</span>avoidable<span class="sc">}</span><span class="ss"> avoidable → £</span><span class="sc">{</span>buy<span class="op">-</span>avoidable<span class="sc">}</span><span class="ss"> per set worse × 4,000 = £</span><span class="sc">{</span>(buy<span class="op">-</span>avoidable)<span class="op">*</span><span class="dv">4_000</span><span class="sc">:,}</span><span class="ss"> LOWER profit → keep making"</span>)</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">▸ With the mould-room sublet at £9,000/yr: making costs </span><span class="sc">{</span>avoidable<span class="sc">}</span><span class="ss"> + 9,000/4,000 = £</span><span class="sc">{</span>avoidable <span class="op">+</span> <span class="dv">9_000</span><span class="op">/</span><span class="dv">4_000</span><span class="sc">:.2f}</span><span class="ss">"</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f" vs £</span><span class="sc">{</span>buy<span class="sc">}</span><span class="ss"> → buying wins by £</span><span class="sc">{</span>(avoidable <span class="op">+</span> <span class="dv">9_000</span><span class="op">/</span><span class="dv">4_000</span> <span class="op">-</span> buy)<span class="op">*</span><span class="dv">4_000</span><span class="sc">:,.0f}</span><span class="ss">/yr"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Avoidable cost of making : £20 per set
+Survives either way      : £4 per set  (× 4,000 = £16,000 the 'saving' never touches)
+Buy at £21 vs £20 avoidable → £1 per set worse × 4,000 = £4,000 LOWER profit → keep making
+
+▸ With the mould-room sublet at £9,000/yr: making costs 20 + 9,000/4,000 = £22.25 vs £21 → buying wins by £5,000/yr</code></pre>
+</div>
+</div>
+<p><strong>The traps:</strong> £24 vs £21 → “save £12,000” is the full-cost trap; keep the £1 depreciation in and it reads 21 vs 21 — an indifference that exists only on paper (depreciation of the mould fails <em>future</em>: it is the spread of money already spent). The ▸ sublet kicker is the opportunity-cost flip once more: an invisible line changes the visible answer.</p>
+</div>
+</div>
+</div>
+<hr>
+<section id="key-takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="key-takeaways">Key takeaways</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Key takeaways
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>A cost is <strong>relevant</strong> only if it’s <strong>future and differs</strong> between the options. Everything else is noise.</li>
+<li><strong>Sunk costs</strong> (visible, large) are irrelevant; <strong>opportunity costs</strong> (invisible) are relevant — we instinctively weight them backwards.</li>
+<li><strong>Keep-or-drop:</strong> compare the contribution you lose with the costs that <strong>actually disappear</strong> — allocated lines that survive never count (the death spiral’s antidote).</li>
+<li><strong>Make-or-buy:</strong> compare <em>incremental</em> costs; existing fixed cost doesn’t differ — only <em>new</em> fixed cost and opportunity cost count, and opportunity cost can flip the answer.</li>
+<li><strong>Special orders:</strong> accept if price &gt; <strong>variable</strong> cost <em>with spare capacity</em>; at full capacity, the displaced contribution is an opportunity cost.</li>
+<li><strong>Constrained resource:</strong> rank by contribution per unit of the <strong>bottleneck</strong> — and with several constraints, optimise instead.</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Tesla case — Part D
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Thursday’s instalment of the week-long Tesla case, <em>Five Days at Fremont</em>, runs inside this lecture: <a href="tesla-case-part-d.pdf">Part D (PDF)</a>, also posted on Moodle. It is read during the flip-the-decisions hands-on; in the final block groups work <strong>all seven questions in order</strong> — D1 (the gates and the $6.2bn), D2 (the memo, rebuilt), D3 (the new-line break-even), D4 (the special order in both capacity states), ▸ D5 (exit the cell business), D6 (the fuller worksheet: counts or ignore), ▸ D7 (the order in between) — and the closing discussion takes every question, in order, with its full solution. Every figure you need is in Exhibits D-1 and D-2; a calculator is all it takes.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-stretch" class="level1">
+<h1>▸ Beyond the core</h1>
+<section id="vw-emden-when-the-model-meets-reality" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="vw-emden-when-the-model-meets-reality">VW Emden: when the model meets reality</h3>
+<p>In September 2024 Volkswagen warned it could no longer rule out <strong>closing German plants</strong> — a first in its 87-year history: <a href="https://www.ft.com/content/f32c172b-d5e9-4397-8831-c61987380e6d">VW considers closing factories in Germany and cutting jobs</a> (<em>FT</em>, 2 September 2024). The relevant-cost frame: closing a plant saves its <strong>avoidable</strong> fixed costs (its own running costs) but <em>not</em> the <strong>unavoidable</strong> corporate overhead that simply re-spreads; against the saving sit a one-off <strong>severance</strong> outflow (future, differs → relevant), the <strong>lost contribution</strong> of the cars no longer built, and heavy <strong>qualitative/political</strong> weights (unions, government, brand). Same toolkit as the keep-or-drop block — with the “qualitative finishes it” point at national scale.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Case discussion — <em>Volkswagen’s Crossroads</em>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Read the case first (~5 min):</strong> <a href="vw-crisis.pdf">Volkswagen’s Crossroads: The Cost of Transition (PDF)</a>. The background through late 2024 is real; the Emden scenario and <strong>all figures are illustrative</strong>, constructed for this exercise.</p>
+<p>Then, in groups of 3–4, work the case’s discussion questions <strong>1–3</strong>:</p>
+<ol type="1">
+<li><strong>Relevant cost analysis</strong> — which of the case’s costs and revenues are relevant to the closure decision, and which are irrelevant (sunk)?</li>
+<li><strong>Quantitative trade-off</strong> — over a 5-year horizon, does the €400m annual saving justify the €1.2bn severance plus the lost €250m annual contribution?</li>
+<li><strong>Strategic vs financial</strong> — how should the board weigh the political and reputational costs against the financial savings?</li>
+</ol>
+<p>Each group reports <strong>one number</strong> (your Q2 verdict) and <strong>one qualitative point</strong>. Question 4 (redesigning the cost system if the board vetoes closures) is for anyone still ahead — it foreshadows Part 2 of the course.</p>
+</div>
+</div>
+</section>
+<section id="coming-next-session-5" class="level2">
+<h2 class="anchored" data-anchor-id="coming-next-session-5">Coming next → Session 5</h2>
+<p>Every number today passed the same test before it counted: future, and different. Tomorrow the future arrives — the quarter closes, the flash numbers land, and Tesla misses the plan. Was it the market, or the factory? Price, volume, or efficiency — and <em>whose</em> fault? That’s variance analysis.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/fmcetin\.com\/ac101");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>LSE Department of Accounting | AC101 Summer School 2026 | Management Accounting and Data-Driven Decision Making</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

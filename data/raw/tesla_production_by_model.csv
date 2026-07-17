@@ -1,0 +1,13 @@
+quarter,year,model_3_y_production,other_models_production,total_production,notes
+Q1,2023,428000,12808,440808,Estimated split based on delivery mix
+Q2,2023,466000,13700,479700,Estimated split based on delivery mix
+Q3,2023,418000,12488,430488,Estimated split based on delivery mix
+Q4,2023,481000,13989,494989,Estimated split based on delivery mix
+Q1,2024,420000,13371,433371,Estimated split based on delivery mix
+Q2,2024,398000,12831,410831,Estimated split based on delivery mix
+Q3,2024,456000,13796,469796,Estimated split based on delivery mix
+Q4,2024,446000,13445,459445,Estimated split based on delivery mix
+Q1,2025,345454,17161,362615,Reported split
+Q2,2025,396835,13409,410244,Reported split
+Q3,2025,435826,11624,447450,Reported split
+Q4,2025,422652,11706,434358,Reported split

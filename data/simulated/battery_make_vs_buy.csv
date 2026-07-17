@@ -1,0 +1,9 @@
+cost_component,in_house_per_kwh,panasonic_per_kwh,notes
+raw_materials,45,0,Lithium nickel cobalt etc
+direct_labor,8,0,Cell manufacturing labor
+manufacturing_overhead,12,0,Equipment depreciation utilities
+quality_control,3,0,Testing and validation
+purchase_price,0,85,Panasonic quoted price per kWh
+logistics,2,5,Transport and handling
+total_variable,70,90,Per kWh variable cost
+annual_fixed_cost_millions,800,0,Ongoing cash operating fixed (utilities/maintenance/salaried staff/leases) - avoidable if the line closes; excludes the sunk ~$6bn build and its depreciation

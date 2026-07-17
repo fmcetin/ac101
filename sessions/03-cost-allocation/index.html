@@ -1,0 +1,2024 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Dr Furkan Çetin">
+<meta name="dcterms.date" content="2026-07-15">
+
+<title>Session 3 — Cost Allocation &amp; ABC – AC101 — Management Accounting and Data-Driven Decision Making</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ef683187e0e68ee1592ce1d995d44e5e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-2ade7b570da940105670a9c06e8385f5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">AC101 — Management Accounting and Data-Driven Decision Making</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-sessions" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Sessions</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-sessions">    
+        <li>
+    <a class="dropdown-item" href="../../sessions/01-cost-management/index.html">
+ <span class="dropdown-text">1: Cost Management</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../sessions/02-cost-estimation/index.html">
+ <span class="dropdown-text">2: Cost Estimation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../sessions/03-cost-allocation/index.html">
+ <span class="dropdown-text">3: Cost Allocation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../sessions/04-decision-making/index.html">
+ <span class="dropdown-text">4: Decision Making</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../sessions/05-variance/index.html">
+ <span class="dropdown-text">5: Variance Analysis</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../data.html"> 
+<span class="menu-text">Data</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sec-toolkit" id="toc-sec-toolkit" class="nav-link active" data-scroll-target="#sec-toolkit">The toolkit, made solid</a>
+  <ul class="collapse">
+  <li><a href="#one-car-four-events-watch-a-l-e" id="toc-one-car-four-events-watch-a-l-e" class="nav-link" data-scroll-target="#one-car-four-events-watch-a-l-e">One car, four events — watch A = L + E</a></li>
+  <li><a href="#r²-the-share-of-the-misses-the-line-removes" id="toc-r²-the-share-of-the-misses-the-line-removes" class="nav-link" data-scroll-target="#r²-the-share-of-the-misses-the-line-removes">R² — the share of the misses the line removes</a></li>
+  <li><a href="#the-p-value-the-luck-question" id="toc-the-p-value-the-luck-question" class="nav-link" data-scroll-target="#the-p-value-the-luck-question">The p-value — the luck question</a></li>
+  <li><a href="#use-the-output-classify-cost-accounts-by-their-p-values" id="toc-use-the-output-classify-cost-accounts-by-their-p-values" class="nav-link" data-scroll-target="#use-the-output-classify-cost-accounts-by-their-p-values">Use the output — classify cost accounts by their p-values</a></li>
+  <li><a href="#break-even-derived-not-just-drawn" id="toc-break-even-derived-not-just-drawn" class="nav-link" data-scroll-target="#break-even-derived-not-just-drawn">Break-even, derived — not just drawn</a></li>
+  </ul></li>
+  <li><a href="#sec-act3" id="toc-sec-act3" class="nav-link" data-scroll-target="#sec-act3">One pot of overhead, two ways to treat it</a></li>
+  <li><a href="#sec-act1" id="toc-sec-act1" class="nav-link" data-scroll-target="#sec-act1">The profitability puzzle</a>
+  <ul class="collapse">
+  <li><a href="#the-simplest-rule-split-by-volume-traditional-allocation" id="toc-the-simplest-rule-split-by-volume-traditional-allocation" class="nav-link" data-scroll-target="#the-simplest-rule-split-by-volume-traditional-allocation">The simplest rule: split by volume (traditional allocation)</a></li>
+  </ul></li>
+  <li><a href="#sec-act2" id="toc-sec-act2" class="nav-link" data-scroll-target="#sec-act2">Activity-based costing &amp; the reveal</a>
+  <ul class="collapse">
+  <li><a href="#activity-based-costing-abc-charge-each-cost-to-what-drives-it" id="toc-activity-based-costing-abc-charge-each-cost-to-what-drives-it" class="nav-link" data-scroll-target="#activity-based-costing-abc-charge-each-cost-to-what-drives-it">Activity-based costing (ABC): charge each cost to what drives it</a></li>
+  <li><a href="#why-those-drivers-the-cost-hierarchy" id="toc-why-those-drivers-the-cost-hierarchy" class="nav-link" data-scroll-target="#why-those-drivers-the-cost-hierarchy">Why those drivers? The cost hierarchy</a></li>
+  <li><a href="#your-turn-the-exams-shape-cold" id="toc-your-turn-the-exams-shape-cold" class="nav-link" data-scroll-target="#your-turn-the-exams-shape-cold">Your turn — the exam’s shape, cold</a></li>
+  <li><a href="#the-trap-should-tesla-drop-the-cybertruck" id="toc-the-trap-should-tesla-drop-the-cybertruck" class="nav-link" data-scroll-target="#the-trap-should-tesla-drop-the-cybertruck">The trap: should Tesla drop the Cybertruck?</a></li>
+  <li><a href="#coming-next-session-4" id="toc-coming-next-session-4" class="nav-link" data-scroll-target="#coming-next-session-4">Coming next → Session 4</a></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">Key takeaways</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Session 3 — Cost Allocation &amp; ABC</h1>
+<p class="subtitle lead">Which Tesla model is really the profit engine?</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dr Furkan Çetin </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">15 July 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><a href="https://colab.research.google.com/github/fmcetin/ac101/blob/gh-pages/notebooks/ac101-s03.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open in Colab"></a> <em>— open today’s notebook in your browser and run along (no install needed)</em></p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>The case — <em>Five Days at Fremont</em> — <a href="tesla-case-part-c.pdf">Part C (PDF)</a>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Today is <strong>Part C — “Wednesday: one factory, five models, one pot of overhead”</strong>: the pricing team’s <em>“why do we bother with the cheap ones?”</em>, a $9,200m pot of shared overhead, and the costing team’s part-finished comparison with the Cybertruck column left for you. It is <strong>read during the ABC hands-on</strong>. We ran out of clock before the group work, so <strong>all seven questions (C1–C4, ▸ C5, C6, C7) are worked in full at the foot of this page</strong> — sit with each one yourself first, then check. Every part is on Moodle; each day’s part is posted here after its lecture.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Opening quiz — Session 2 + Class 2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Seven questions on yesterday and the toolkit section below. One best answer each; write your letters (or vote on Menti in the room), then check the reveal. <em>Formative only — not graded, no effect on your grade.</em></p>
+<ol type="1">
+<li>BrightGlass Studio, a glass-blowing workshop, treats its furnace electricity as a mixed cost. Over four months it records: March — 400 pieces, £5,600; April — 650 pieces, £7,725; May — 500 pieces, £8,200; June — 300 pieces, £4,750. Using the high-low method, what is the variable electricity cost per piece? A. £4.58 B. £8.50 C. £11.88 D. £17.25</li>
+<li>HomeFix Repairs, an appliance-repair firm, regresses its monthly call-out costs on the number of jobs completed and obtains: Cost = £5,200 + £24 × jobs, with R² = 0.92. Which interpretation is correct?
+<ul>
+<li><strong>A.</strong> Fixed costs are £24 per job and variable call-out costs total £5,200 each month.</li>
+<li><strong>B.</strong> Because R² is below 1, the regression is unreliable and the firm should rely on the high-low method instead.</li>
+<li><strong>C.</strong> Each extra job adds roughly £24 to total cost, and jobs explain about 92% of the variation in monthly cost.</li>
+<li><strong>D.</strong> The £5,200 intercept is the profit the firm keeps each month after paying its call-out costs.</li>
+</ul></li>
+<li>CaseCraft makes protective phone cases. Each case sells for £26 and has a variable cost of £7, giving a contribution margin of £19 per case. Which statement best describes this £19?
+<ul>
+<li><strong>A.</strong> It is the profit CaseCraft earns on every case sold, regardless of the volume achieved.</li>
+<li><strong>B.</strong> It is the fixed cost carried by each individual case at the current level of sales volume.</li>
+<li><strong>C.</strong> It is the amount by which the selling price exceeds the total (full) cost of making a case.</li>
+<li><strong>D.</strong> It is each case’s contribution towards fixed costs, becoming profit only after break-even.</li>
+</ul></li>
+<li>Trailhead Tours runs guided hill walks at £72 per walker; variable cost is £27 per walker and fixed costs are £13,500 a month. It currently takes 500 walkers a month. What is its margin of safety, as a percentage? A. 40% B. 60% C. 62.5% D. 66.7%</li>
+<li>Using 300 weeks of data, a supermarket chain regresses weekly energy cost on customer visits and finds a slope of £0.04 per visit, with p = 0.001. Weekly fixed energy cost is about £180,000, and the chain averages 90,000 visits a week (about £3,600 of visit-driven cost). Which is the best reading?
+<ul>
+<li><strong>A.</strong> The effect is statistically significant, so visits must be the main driver of energy cost.</li>
+<li><strong>B.</strong> Statistically significant but economically small — visits move the bill by only ~2%, so the finding changes no decision.</li>
+<li><strong>C.</strong> p = 0.001 means the £0.04 estimate is 99.9% accurate.</li>
+<li><strong>D.</strong> Because p is below 0.05, the chain should treat energy as a purely variable cost.</li>
+</ul></li>
+<li>Harbour Ferries charges £30 per passenger; variable cost is £12 per passenger and fixed costs are £90,000 a month. Using the profit equation π = CM × Q − FC, how many passengers does it need each month to earn a £27,000 profit? A. 5,000 B. 6,500 C. 3,900 D. 1,500</li>
+<li>Meridian Boats finishes building a yacht in November at a total build cost of £60,000 and sells it the following February for £95,000. Its financial year ends on 31 December. Which statement is correct?
+<ul>
+<li><strong>A.</strong> The £60,000 is an expense of the old year, because the money was spent before 31 December.</li>
+<li><strong>B.</strong> At 31 December the £60,000 sits in inventory (an asset); it becomes cost of goods sold in February, matched against the £95,000.</li>
+<li><strong>C.</strong> The yacht’s cost hits profit in November, when the build is completed; the February sale then adds £95,000 of pure profit.</li>
+<li><strong>D.</strong> At 31 December the yacht is an expense held in inventory until the sale takes place.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Reveal
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>B</strong> — high and low <strong>activity</strong> months are April (650, £7,725) and June (300, £4,750): b = £2,975 ÷ 350 = £8.50. Picking by highest/lowest <em>cost</em> (May and June) is the trap.</li>
+<li><strong>C</strong> — slope = variable cost per job, intercept = estimated fixed cost, R² = the share of cost variation the driver explains.</li>
+<li><strong>D</strong> — contribution covers the fixed-cost pile first; only after break-even does it become profit.</li>
+<li><strong>A</strong> — CM = £45, break-even = £13,500 ÷ £45 = 300 walkers, margin of safety = (500 − 300) ÷ 500 = 40%.</li>
+<li><strong>B</strong> — statistically significant (too strong to be luck) ≠ economically significant (big enough to matter): ~£3,600 against a ~£180,000 fixed bill is ~2% — real, but it changes nothing.</li>
+<li><strong>B</strong> — CM = £18; set π = 27,000 → Q = (90,000 + 27,000) ÷ 18 = 6,500. (A is break-even only; C divides by the price; D forgets the fixed pile.)</li>
+<li><strong>B</strong> — the build cost waits in <strong>inventory</strong> (an asset) and is released into profit as <strong>COGS at the sale</strong>, matched to its revenue. “Expense in inventory” (D) is a category error — inventory is an asset category.</li>
+</ol>
+<p>So we can now draw Tesla’s <em>total</em> cost line. But inside that line sits a <strong>$9.2 bn</strong> pot of overhead <strong>no single car causes</strong> — and what you <em>do</em> with that pot decides reported profit, and which of Fremont’s five models looks like the winner. That pot is today’s whole story. ↓</p>
+</div>
+</div>
+</div>
+<hr>
+<section id="sec-toolkit" class="level1">
+<h1>The toolkit, made solid</h1>
+<p><em>Where a car’s cost lives before it’s sold · what R² and the p-value really say · where break-even comes from. Three pieces Session 2 moved through fast — this section makes them tools you can use.</em></p>
+<section id="one-car-four-events-watch-a-l-e" class="level2">
+<h2 class="anchored" data-anchor-id="one-car-four-events-watch-a-l-e">One car, four events — watch A = L + E</h2>
+<p>A Model Y’s cost story, in illustrative round numbers:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Event</th>
+<th style="text-align: right;">Cash</th>
+<th style="text-align: right;">Inventory</th>
+<th style="text-align: right;">Liabilities</th>
+<th style="text-align: right;">Equity (profit)</th>
+<th>A = L + E?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1 · Buy the materials</td>
+<td style="text-align: right;">−$20k</td>
+<td style="text-align: right;">+$20k</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td>✓ assets just swap</td>
+</tr>
+<tr class="even">
+<td>2 · Pay wages to build the car</td>
+<td style="text-align: right;">−$5k</td>
+<td style="text-align: right;">+$5k</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td>✓ the wage becomes part of the car’s cost</td>
+</tr>
+<tr class="odd">
+<td>3 · The finished car waits — even across a year-end</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td>✓ nothing moves; the $25k cost <em>waits</em></td>
+</tr>
+<tr class="even">
+<td>4 · Sell it for $42k</td>
+<td style="text-align: right;">+$42k</td>
+<td style="text-align: right;">−$25k</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;"><strong>+$17k</strong></td>
+<td>✓ +17 assets = +17 equity</td>
+</tr>
+</tbody>
+</table>
+<p>Profit moves <strong>once</strong>, in event 4: revenue $42k − <strong>cost of goods sold $25k</strong> = <strong>+$17k</strong> — the car’s whole cost, released into profit at the moment of sale.</p>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>The message
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>A cost becomes an expense only when it earns its revenue.</strong> Building a car moves money <em>between assets</em> (cash → inventory); even the assembly wages are capitalised into the car’s cost rather than expensed. Selling the car creates revenue <strong>and</strong> releases its cost into profit as <strong>COGS</strong> — in the same breath. Until the sale, profit has not moved.</p>
+</div>
+</div>
+<p>And that is why <strong>deliveries</strong> — cars <em>sold</em> — drive COGS while <strong>production</strong> doesn’t (R² 0.84 vs 0.15 in Session 2): the regression agreed with the accounting.</p>
+</section>
+<section id="r²-the-share-of-the-misses-the-line-removes" class="level2">
+<h2 class="anchored" data-anchor-id="r²-the-share-of-the-misses-the-line-removes">R² — the share of the misses the line removes</h2>
+<p>With <strong>no line</strong>, your best guess for any month’s cost is the <strong>average</strong>. R² asks how much better the line does:</p>
+<div id="cell-fig-r2-misses" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>demo <span class="op">=</span> pd.read_csv(<span class="st">'../../data/teaching/monthly_cost_demo.csv'</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>d_s, d_i, d_r, d_p, d_se <span class="op">=</span> stats.linregress(demo[<span class="st">'units'</span>], demo[<span class="st">'total_cost'</span>])</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>sst <span class="op">=</span> ((demo[<span class="st">'total_cost'</span>] <span class="op">-</span> demo[<span class="st">'total_cost'</span>].mean())<span class="op">**</span><span class="dv">2</span>).<span class="bu">sum</span>()   <span class="co"># misses around the average</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>sse <span class="op">=</span> ((demo[<span class="st">'total_cost'</span>] <span class="op">-</span> (d_i <span class="op">+</span> d_s<span class="op">*</span>demo[<span class="st">'units'</span>]))<span class="op">**</span><span class="dv">2</span>).<span class="bu">sum</span>()   <span class="co"># misses around the line</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>fig, (a1, a2) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">11</span>, <span class="dv">4</span>), sharey<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>ybar <span class="op">=</span> demo[<span class="st">'total_cost'</span>].mean()</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>pred <span class="op">=</span> d_i <span class="op">+</span> d_s<span class="op">*</span>demo[<span class="st">'units'</span>]</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>a1.scatter(demo[<span class="st">'units'</span>], demo[<span class="st">'total_cost'</span>], s<span class="op">=</span><span class="dv">55</span>, color<span class="op">=</span>BLUE, alpha<span class="op">=</span><span class="fl">.75</span>, edgecolors<span class="op">=</span><span class="st">'black'</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>a1.axhline(ybar, color<span class="op">=</span><span class="st">'0.35'</span>, lw<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>a1.vlines(demo[<span class="st">'units'</span>], ybar, demo[<span class="st">'total_cost'</span>], color<span class="op">=</span>TESLA_RED, ls<span class="op">=</span><span class="st">':'</span>, lw<span class="op">=</span><span class="fl">1.8</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>a1.set_title(<span class="st">'No line: guess with the average'</span>)<span class="op">;</span> a1.set_xlabel(<span class="st">'Units'</span>)<span class="op">;</span> a1.set_ylabel(<span class="st">'Total cost (£)'</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>a2.scatter(demo[<span class="st">'units'</span>], demo[<span class="st">'total_cost'</span>], s<span class="op">=</span><span class="dv">55</span>, color<span class="op">=</span>BLUE, alpha<span class="op">=</span><span class="fl">.75</span>, edgecolors<span class="op">=</span><span class="st">'black'</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>xs <span class="op">=</span> np.linspace(demo[<span class="st">'units'</span>].<span class="bu">min</span>(), demo[<span class="st">'units'</span>].<span class="bu">max</span>(), <span class="dv">40</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>a2.plot(xs, d_i <span class="op">+</span> d_s<span class="op">*</span>xs, color<span class="op">=</span><span class="st">'navy'</span>, lw<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>a2.vlines(demo[<span class="st">'units'</span>], pred, demo[<span class="st">'total_cost'</span>], color<span class="op">=</span>TESLA_RED, ls<span class="op">=</span><span class="st">':'</span>, lw<span class="op">=</span><span class="fl">1.8</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>a2.set_title(<span class="st">'With the line: the misses shrink'</span>)<span class="op">;</span> a2.set_xlabel(<span class="st">'Units'</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> a_ <span class="kw">in</span> (a1, a2): a_.grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">.3</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()<span class="op">;</span> plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="fig-r2-misses" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-r2-misses-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-r2-misses-output-1.png" width="1638" height="585" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-r2-misses-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Left: guessing every month with the average — the dotted gaps are the misses. Right: guessing with the regression line — the misses shrink. R² is the share of the (squared) misses the line removes.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div id="r2-decomposition" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Squared misses around the average : </span><span class="sc">{</span>sst<span class="sc">:,.0f}</span><span class="ss">"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Squared misses around the line    : </span><span class="sc">{</span>sse<span class="sc">:,.0f}</span><span class="ss">"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Share the line removes            : 1 − </span><span class="sc">{</span>sse<span class="op">/</span>sst<span class="sc">:.3f}</span><span class="ss"> = </span><span class="sc">{</span><span class="dv">1</span> <span class="op">-</span> sse<span class="op">/</span>sst<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Squared misses around the average : 4,926,916,667
+Squared misses around the line    : 781,014,208
+Share the line removes            : 1 − 0.159 = 0.841</code></pre>
+</div>
+</div>
+<p><strong>That is R².</strong> R² = 0.841 means the line removes <strong>84%</strong> of the variation the average leaves behind. Formally: <span class="math inline">\(R^2 = 1 - \sum(Y-\hat{Y})^2 / \sum(Y-\bar{Y})^2\)</span>. R² tells you <em>how much to lean on the line</em> — never that the line is <em>right</em> (recall B6: total revenue fitted COGS at R² = 0.963 and was still the wrong driver).</p>
+</section>
+<section id="the-p-value-the-luck-question" class="level2">
+<h2 class="anchored" data-anchor-id="the-p-value-the-luck-question">The p-value — the luck question</h2>
+<p>Session 2’s slope said <strong>$31,951 per car</strong>, with p = 0.0013. The p-value answers one worry: <em>with only 8 quarters, couldn’t a slope that size appear by pure luck — even if deliveries had nothing to do with COGS?</em> Break the link on purpose and see:</p>
+<div id="cell-fig-shuffle" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>tq <span class="op">=</span> pd.read_csv(<span class="st">'../../data/raw/tesla_quarterly.csv'</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>tq <span class="op">=</span> tq[tq[<span class="st">'year'</span>].isin([<span class="dv">2023</span>, <span class="dv">2024</span>])].copy()</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>dels <span class="op">=</span> tq[<span class="st">'deliveries'</span>].values.astype(<span class="bu">float</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>cogs <span class="op">=</span> tq[<span class="st">'cogs_millions'</span>].values.astype(<span class="bu">float</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>ts, ti, tr, tp_, tse <span class="op">=</span> stats.linregress(dels, cogs)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(<span class="dv">101</span>)                      <span class="co"># seeded — rerun and you get the same picture</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>shuffle_slopes <span class="op">=</span> np.array([stats.linregress(dels, rng.permutation(cogs)).slope</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>                           <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2_000</span>)]) <span class="op">*</span> <span class="fl">1e6</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>n_reached <span class="op">=</span> <span class="bu">int</span>((np.<span class="bu">abs</span>(shuffle_slopes) <span class="op">&gt;=</span> <span class="bu">abs</span>(ts<span class="op">*</span><span class="fl">1e6</span>)).<span class="bu">sum</span>())</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="dv">4</span>))</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>ax.hist(shuffle_slopes, bins<span class="op">=</span><span class="dv">45</span>, color<span class="op">=</span>BLUE, alpha<span class="op">=</span><span class="fl">.75</span>, edgecolor<span class="op">=</span><span class="st">'white'</span>)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>ax.axvline(ts<span class="op">*</span><span class="fl">1e6</span>, color<span class="op">=</span>TESLA_RED, lw<span class="op">=</span><span class="fl">2.5</span>)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="ss">f'our slope: $</span><span class="sc">{</span>ts<span class="op">*</span><span class="fl">1e6</span><span class="sc">:,.0f}</span><span class="ss">'</span>, xy<span class="op">=</span>(ts<span class="op">*</span><span class="fl">1e6</span>, <span class="dv">45</span>), xytext<span class="op">=</span>(ts<span class="op">*</span><span class="fl">1e6</span> <span class="op">-</span> <span class="dv">24_000</span>, <span class="dv">72</span>),</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>            fontsize<span class="op">=</span><span class="dv">10</span>, color<span class="op">=</span>TESLA_RED, fontweight<span class="op">=</span><span class="st">'bold'</span>,</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>            arrowprops<span class="op">=</span><span class="bu">dict</span>(arrowstyle<span class="op">=</span><span class="st">'-&gt;'</span>, color<span class="op">=</span>TESLA_RED))</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Slope luck produced ($ per car)'</span>)<span class="op">;</span> ax.set_ylabel(<span class="st">'Shuffles'</span>)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'What "statistically significant" looks like'</span>)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">.3</span>)</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()<span class="op">;</span> plt.show()</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Shuffles (out of 2,000) that reached the real slope: </span><span class="sc">{</span>n_reached<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="fig-shuffle" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-shuffle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-shuffle-output-1.png" width="1336" height="585" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-shuffle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Shuffle the eight COGS numbers across the quarters (destroying any real link), refit the line, repeat 2,000 times. The blue mound is what luck alone produces; the red line is the real slope.
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Shuffles (out of 2,000) that reached the real slope: 0</code></pre>
+</div>
+</div>
+<p>In 2,000 shuffles, luck <strong>never once</strong> reached our slope. The regression’s <strong>p = 0.0013</strong> asks exactly this question with a formula instead of shuffling: <em>if the true slope were zero, chance would produce one this strong about once in 750 tries.</em> That is all <strong>statistically significant</strong> means — <em>too strong to be luck</em> (convention: p &lt; 0.05). It is <strong>not</strong> the accuracy of the estimate, and <strong>not</strong> the probability the answer is right.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Define it well
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Statistically significant</strong> — too strong to be luck (small p). Says nothing about <strong>size</strong>. <strong>Economically significant</strong> — big enough to change a decision. Says nothing about <strong>certainty</strong>.</p>
+<p>Two illustrations: a paint-shop electricity slope of <strong>$9 per car with p = 0.001</strong> is certainly real and utterly irrelevant next to $31,951 of variable cost (<em>statistically yes, economically no</em>). A supplier-rebate effect of <strong>−$2,100 per car with p = 0.31</strong> would matter enormously if real, but eight quarters can’t tell (<em>economically yes, statistically not yet — get more data before acting</em>). <strong>Act on numbers that are both.</strong></p>
+</div>
+</div>
+</section>
+<section id="use-the-output-classify-cost-accounts-by-their-p-values" class="level2">
+<h2 class="anchored" data-anchor-id="use-the-output-classify-cost-accounts-by-their-p-values">Use the output — classify cost accounts by their p-values</h2>
+<p>Regression output is <em>for</em> three things: the <strong>split</strong> feeds decisions (CVP, forecasts, the case); <strong>R²</strong> says how far to trust the line; and the <strong>p-values classify cost behaviour</strong>, account by account — this is how a finance team actually splits a ledger:</p>
+<div id="acct-classify" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># SIMULATED quarterly cost accounts (labelled): built on the REAL 2023–24</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># deliveries, plausible magnitudes, seed fixed — Tesla does not publish this detail.</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>rng2 <span class="op">=</span> np.random.default_rng(<span class="dv">19</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>acct <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Factory security &amp; insurance'</span>: <span class="dv">44</span> <span class="op">+</span> rng2.normal(<span class="dv">0</span>, <span class="fl">2.2</span>, <span class="dv">8</span>),</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Battery cells &amp; materials'</span>:    <span class="fl">0.0209</span> <span class="op">*</span> dels <span class="op">+</span> rng2.normal(<span class="dv">0</span>, <span class="dv">55</span>, <span class="dv">8</span>),</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Plant power &amp; maintenance'</span>:    <span class="dv">220</span> <span class="op">+</span> <span class="fl">0.00025</span> <span class="op">*</span> dels <span class="op">+</span> rng2.normal(<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">8</span>),</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fit_account(y):</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    res <span class="op">=</span> stats.linregress(dels, y)</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    t_int <span class="op">=</span> res.intercept <span class="op">/</span> res.intercept_stderr</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    p_int <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> stats.t.cdf(<span class="bu">abs</span>(t_int), <span class="bu">len</span>(dels) <span class="op">-</span> <span class="dv">2</span>))</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> res.intercept, p_int, res.slope<span class="op">*</span><span class="fl">1e6</span>, res.pvalue, res.rvalue<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="st">'ACCOUNT'</span><span class="sc">:&lt;34}{</span><span class="st">'Intercept (p)'</span><span class="sc">:&gt;18}{</span><span class="st">'Slope/car (p)'</span><span class="sc">:&gt;20}{</span><span class="st">'R²'</span><span class="sc">:&gt;8}</span><span class="ss">"</span>)</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"-"</span> <span class="op">*</span> <span class="dv">80</span>)</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name <span class="kw">in</span> acct:</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    a0, pa, b1, pb, r2 <span class="op">=</span> fit_account(acct[name])</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    pa_s <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>pa<span class="sc">:.3f}</span><span class="ss">"</span> <span class="cf">if</span> pa <span class="op">&gt;=</span> <span class="fl">0.001</span> <span class="cf">else</span> <span class="st">"&lt;0.001"</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    pb_s <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>pb<span class="sc">:.3f}</span><span class="ss">"</span> <span class="cf">if</span> pb <span class="op">&gt;=</span> <span class="fl">0.001</span> <span class="cf">else</span> <span class="st">"&lt;0.001"</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>name<span class="sc">:&lt;34}{</span><span class="ss">f'$</span><span class="sc">{</span>a0<span class="sc">:,.0f}</span><span class="ss">m (</span><span class="sc">{</span>pa_s<span class="sc">}</span><span class="ss">)'</span><span class="sc">:&gt;18}{</span><span class="ss">f'$</span><span class="sc">{</span>b1<span class="sc">:,.0f}</span><span class="ss"> (</span><span class="sc">{</span>pb_s<span class="sc">}</span><span class="ss">)'</span><span class="sc">:&gt;20}{</span>r2<span class="sc">:&gt;8.2f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>ACCOUNT                                Intercept (p)       Slope/car (p)      R²
+--------------------------------------------------------------------------------
+Factory security &amp; insurance            $50m (0.002)        $-13 (0.537)    0.07
+Battery cells &amp; materials             $-163m (0.518)    $21,313 (&lt;0.001)    1.00
+Plant power &amp; maintenance             $213m (&lt;0.001)        $263 (0.002)    0.83</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Your turn (then check)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For each account: <strong>fixed, variable or mixed?</strong> Use only the p-values — which pieces of each line are <em>real</em>? ▸ One intercept is <em>negative</em>. Why is that not alarming here?</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Reveal
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Factory security &amp; insurance → FIXED.</strong> The intercept is real (p = 0.002); the slope is noise (−$13, p = 0.54).</li>
+<li><strong>Battery cells &amp; materials → VARIABLE.</strong> The slope is emphatically real ($21,313/car, p &lt; 0.001); the intercept is noise (p = 0.52).</li>
+<li><strong>Plant power &amp; maintenance → MIXED.</strong> Both pieces are real ($213m base; $263/car) — a genuine <span class="math inline">\(a + bX\)</span>.</li>
+<li>▸ The <strong>−$163m</strong> “fixed cost” is the same tell as B6’s −$573m: an impossible number <em>estimated from noise</em> — its p-value (0.52) says exactly that. Read the p-value <strong>before</strong> you read the coefficient.</li>
+</ul>
+<p><strong>The rule:</strong> a coefficient without a credible p-value isn’t a number — it’s a guess wearing one.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="break-even-derived-not-just-drawn" class="level2">
+<h2 class="anchored" data-anchor-id="break-even-derived-not-just-drawn">Break-even, derived — not just drawn</h2>
+<p>Start from what profit <em>is</em>, using Session 2’s cost function:</p>
+<p><span class="math display">\[\pi \;=\; \underbrace{P \cdot Q}_{\text{revenue}} - \underbrace{(FC + VC \cdot Q)}_{\text{total cost}} \;=\; (P - VC)\cdot Q - FC \;=\; \text{CM}\cdot Q - FC\]</span></p>
+<p>Set <span class="math inline">\(\pi = 0\)</span> for <strong>break-even</strong>: <span class="math inline">\(Q^{*} = FC/\text{CM}\)</span>. Want a <strong>target profit</strong> <span class="math inline">\(\pi^{*}\)</span>? <span class="math inline">\(Q = (FC + \pi^{*})/\text{CM}\)</span> — the pile just grows by the target. Sanity check on Tesla: $4,295m ÷ $22,648 ≈ 190,000 cars a quarter — Session 2’s number, now proved rather than pictured.</p>
+<div id="cell-fig-profit-volume" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>rev24 <span class="op">=</span> tq.loc[tq[<span class="st">'year'</span>] <span class="op">==</span> <span class="dv">2024</span>, <span class="st">'revenue_millions'</span>].<span class="bu">sum</span>()</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>del24 <span class="op">=</span> tq.loc[tq[<span class="st">'year'</span>] <span class="op">==</span> <span class="dv">2024</span>, <span class="st">'deliveries'</span>].<span class="bu">sum</span>()</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>rev_per_car <span class="op">=</span> rev24 <span class="op">*</span> <span class="fl">1e6</span> <span class="op">/</span> del24</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>cm_unit  <span class="op">=</span> rev_per_car <span class="op">-</span> ts<span class="op">*</span><span class="fl">1e6</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>fixed_q  <span class="op">=</span> ti</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>be_units <span class="op">=</span> fixed_q<span class="op">*</span><span class="fl">1e6</span> <span class="op">/</span> cm_unit</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>actual_q <span class="op">=</span> del24 <span class="op">/</span> <span class="dv">4</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>qv <span class="op">=</span> np.linspace(<span class="dv">0</span>, actual_q<span class="op">*</span><span class="fl">1.25</span>, <span class="dv">200</span>)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>pi_m <span class="op">=</span> (cm_unit<span class="op">*</span>qv <span class="op">-</span> fixed_q<span class="op">*</span><span class="fl">1e6</span>) <span class="op">/</span> <span class="fl">1e6</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="dv">4</span>))</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>ax.plot(qv<span class="op">/</span><span class="dv">1000</span>, pi_m, color<span class="op">=</span><span class="st">'navy'</span>, lw<span class="op">=</span><span class="fl">2.5</span>)</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'0.4'</span>, lw<span class="op">=</span><span class="fl">1.2</span>)</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>ax.fill_between(qv<span class="op">/</span><span class="dv">1000</span>, pi_m, <span class="dv">0</span>, where<span class="op">=</span>(pi_m <span class="op">&lt;</span> <span class="dv">0</span>), color<span class="op">=</span>TESLA_RED, alpha<span class="op">=</span><span class="fl">.12</span>)</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>ax.fill_between(qv<span class="op">/</span><span class="dv">1000</span>, pi_m, <span class="dv">0</span>, where<span class="op">=</span>(pi_m <span class="op">&gt;=</span> <span class="dv">0</span>), color<span class="op">=</span><span class="st">'seagreen'</span>, alpha<span class="op">=</span><span class="fl">.12</span>)</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>ax.scatter([<span class="dv">0</span>], [<span class="op">-</span>fixed_q], s<span class="op">=</span><span class="dv">55</span>, color<span class="op">=</span>TESLA_RED, zorder<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>ax.axvline(be_units<span class="op">/</span><span class="dv">1000</span>, color<span class="op">=</span><span class="st">'black'</span>, ls<span class="op">=</span><span class="st">':'</span>, alpha<span class="op">=</span><span class="fl">.6</span>)</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="ss">f'π = 0 at Q* ≈ </span><span class="sc">{</span>be_units<span class="op">/</span><span class="dv">1000</span><span class="sc">:.0f}</span><span class="ss">k'</span>, xy<span class="op">=</span>(be_units<span class="op">/</span><span class="dv">1000</span>, <span class="dv">0</span>),</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>            xytext<span class="op">=</span>(be_units<span class="op">/</span><span class="dv">1000</span> <span class="op">+</span> <span class="dv">18</span>, <span class="op">-</span><span class="dv">2600</span>), fontsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>ax.axvline(actual_q<span class="op">/</span><span class="dv">1000</span>, color<span class="op">=</span><span class="st">'navy'</span>, ls<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">.6</span>)</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="ss">f'actual ≈ </span><span class="sc">{</span>actual_q<span class="op">/</span><span class="dv">1000</span><span class="sc">:.0f}</span><span class="ss">k'</span>, xy<span class="op">=</span>(actual_q<span class="op">/</span><span class="dv">1000</span>, <span class="dv">0</span>),</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>            xytext<span class="op">=</span>(actual_q<span class="op">/</span><span class="dv">1000</span> <span class="op">+</span> <span class="dv">8</span>, <span class="dv">1200</span>), fontsize<span class="op">=</span><span class="dv">10</span>, color<span class="op">=</span><span class="st">'navy'</span>)</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Deliveries per quarter (000s)'</span>)<span class="op">;</span> ax.set_ylabel(<span class="st">'Quarterly profit, $m (COGS basis)'</span>)</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">.3</span>)</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()<span class="op">;</span> plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="fig-profit-volume" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-profit-volume-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-profit-volume-output-1.png" width="1337" height="585" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-profit-volume-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: π = CM·Q − FC is a straight line in Q: it starts at −FC (sell nothing, lose the whole pile), climbs by CM per car, and crosses zero at Q*.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>What you must be able to do
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Every line below is an exam-question shape, and none of them needs code — pen, paper and a calculator, exactly like the exam:</p>
+<ol type="1">
+<li><strong>Trace a cost through cash → inventory → COGS</strong>, keeping A = L + E balanced — and say <em>when</em> profit moves (at the sale, not the spend).</li>
+<li><strong>Read regression output</strong>: name the intercept and slope in money, and say in one sentence each what <strong>R²</strong> and the <strong>p-value</strong> mean.</li>
+<li><strong>Classify a cost account</strong> fixed / variable / mixed <strong>from its p-values</strong>.</li>
+<li><strong>Derive and use</strong> <span class="math inline">\(Q^{*} = FC/\text{CM}\)</span> — and <span class="math inline">\(Q = (FC + \pi^{*})/\text{CM}\)</span> for a profit target.</li>
+</ol>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="sec-act3" class="level1">
+<h1>One pot of overhead, two ways to treat it</h1>
+<p><strong>Why overhead is the story now.</strong> A century ago, making things was mostly <em>direct</em> cost — materials you could weigh, labour you could clock; overhead was a rounding error. Automation inverted that: robots, giga-presses, paint shops, test labs and battery plants are <strong>indirect</strong> — enormous, and traceable to no single car. At our stylised Fremont the shared pot comes to <strong>$9.2 bn a year — ≈ $7,480 per car</strong>, rivalling the car’s own materials. (Recall <strong>De Ridder (2024)</strong> from Session 1: intangible, high-fixed-cost production is this pattern, economy-wide.) The biggest slice of a modern product’s cost is the slice nobody can point at — and what to do with it is this session.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>The fork — define them well
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Variable (marginal) costing:</strong> fixed overhead is a <strong>period expense</strong> — all of it hits this period’s profit, and no unit carries any of it.</li>
+<li><strong>Absorption (full) costing:</strong> fixed manufacturing overhead is <em>baked into each unit’s cost</em>. A unit made but <strong>not sold</strong> carries its slice of fixed overhead into <strong>inventory</strong> (the balance sheet) — not this period’s expense.</li>
+</ul>
+<p><strong>One of these is not a choice</strong>: external financial reports <strong>must</strong> use absorption — IAS 2 (and US GAAP) require fixed production overhead in inventory cost. Variable costing is the internal, decision-making lens — yesterday’s whole CVP toolkit was variable-costing thinking.</p>
+</div>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Absorption (full)</strong></th>
+<th><strong>Variable (marginal)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fixed production overhead</td>
+<td>in each unit’s cost</td>
+<td>expensed in the period</td>
+</tr>
+<tr class="even">
+<td>Required for</td>
+<td><strong>external reports</strong> (IAS 2)</td>
+<td>— (internal only)</td>
+</tr>
+<tr class="odd">
+<td>Best at</td>
+<td>long-run product economics</td>
+<td>short-run decisions and control (CVP)</td>
+</tr>
+<tr class="even">
+<td>Weakness</td>
+<td>profit moves with <strong>production</strong>, not just sales</td>
+<td>understates the long-run cost of complexity</td>
+</tr>
+</tbody>
+</table>
+<p>Absorption’s weakness deserves its own discovery:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Discussion — the quarter is slipping
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You run the Fremont plant, and reported profit uses <strong>absorption costing</strong>. It’s quarter-end. Sales are <strong>fixed by demand</strong>: 120,000 cars will sell — you can’t conjure buyers. On the current plan (build 120,000), reported profit comes in at <strong>$600m</strong>; your <strong>bonus gate is $800m</strong>; and the line has <strong>spare capacity</strong>.</p>
+<p><strong>What could you do — entirely legally — to close a $200m gap without selling one extra car?</strong></p>
+<p><em>Hypothetical scenario — realistic single-plant quarterly magnitudes: price $45,000, variable cost $30,000 per car, fixed production overhead $1,200m.</em></p>
+</div>
+</div>
+<p>The lever someone always finds: <strong>build more than you sell.</strong> First the <strong>picture</strong> — where does fixed overhead <em>go</em> under absorption costing? Say the plant builds <strong>150,000</strong> cars but sells only <strong>120,000</strong>:</p>
+<div id="1df15619" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># the worked example's givens — one plant, one quarter</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>price, var_cost, fixed_oh, sales <span class="op">=</span> <span class="dv">45_000</span>, <span class="dv">30_000</span>, <span class="fl">1_200e6</span>, <span class="dv">120_000</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cell-plot-oh-flow" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/plot-oh-flow-output-1.png" id="plot-oh-flow" width="1335" height="495" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><em>Recall Session 1’s <strong>cost vs expense</strong>: the parked $240m is still a <strong>cost</strong> — an asset sitting in inventory — and becomes an <strong>expense</strong> only when those cars sell. Nothing vanished; it’s just not in <strong>this quarter’s</strong> profit. (The figure tracks the fixed overhead only — the cars’ variable costs flow through COGS as usual.)</em></p>
+<p>Now watch reported profit as we <strong>overproduce</strong> — sales held fixed at 120,000 cars:</p>
+<div id="overproduction" class="cell" data-execution_count="9">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># price, var_cost, fixed_oh, sales defined above (one plant, one quarter)</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> profit(production, costing):</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    revenue <span class="op">=</span> price <span class="op">*</span> sales</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> costing <span class="op">==</span> <span class="st">'variable'</span>:</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> (revenue <span class="op">-</span> var_cost<span class="op">*</span>sales <span class="op">-</span> fixed_oh) <span class="op">/</span> <span class="fl">1e6</span>            <span class="co"># fixed all expensed</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    foh_per_unit <span class="op">=</span> fixed_oh <span class="op">/</span> production                              <span class="co"># absorption: spread over output</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    cogs <span class="op">=</span> (var_cost <span class="op">+</span> foh_per_unit) <span class="op">*</span> sales                         <span class="co"># only SOLD units expensed</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (revenue <span class="op">-</span> cogs) <span class="op">/</span> <span class="fl">1e6</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="st">'Production'</span><span class="sc">:&gt;12}{</span><span class="st">'Absorption profit'</span><span class="sc">:&gt;20}{</span><span class="st">'Variable profit'</span><span class="sc">:&gt;18}{</span><span class="st">'Parked in inventory'</span><span class="sc">:&gt;22}</span><span class="ss">"</span>)</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"-"</span> <span class="op">*</span> <span class="dv">72</span>)</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> p <span class="kw">in</span> (<span class="dv">120_000</span>, <span class="dv">135_000</span>, <span class="dv">150_000</span>, <span class="dv">180_000</span>):</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    parked <span class="op">=</span> (p <span class="op">-</span> sales) <span class="op">*</span> (fixed_oh<span class="op">/</span>p) <span class="op">/</span> <span class="fl">1e6</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>p<span class="sc">:&gt;12,}{</span>profit(p,<span class="st">'absorption'</span>)<span class="sc">:&gt;18,.0f}</span><span class="ss">m</span><span class="sc">{</span>profit(p,<span class="st">'variable'</span>)<span class="sc">:&gt;16,.0f}</span><span class="ss">m</span><span class="sc">{</span>parked<span class="sc">:&gt;20,.0f}</span><span class="ss">m"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Production   Absorption profit   Variable profit   Parked in inventory
+------------------------------------------------------------------------
+     120,000               600m             600m                   0m
+     135,000               733m             600m                 133m
+     150,000               840m             600m                 240m
+     180,000             1,000m             600m                 400m</code></pre>
+</div>
+</div>
+<p><strong>135,000 isn’t enough ($733m). 150,000 clears the gate: $840m reported</strong> — a $200m gap closed by building 30,000 cars nobody ordered. The variable column never moves: same sales, same economics.</p>
+<div id="cell-fig-overproduction" class="cell" data-execution_count="10">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>prods <span class="op">=</span> np.arange(<span class="dv">120_000</span>, <span class="dv">182_500</span>, <span class="dv">2_500</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>absn <span class="op">=</span> [profit(p, <span class="st">'absorption'</span>) <span class="cf">for</span> p <span class="kw">in</span> prods]</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>varn <span class="op">=</span> [profit(p, <span class="st">'variable'</span>)   <span class="cf">for</span> p <span class="kw">in</span> prods]</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="dv">5</span>))</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>ax.plot(prods<span class="op">/</span><span class="dv">1000</span>, absn, color<span class="op">=</span>TESLA_RED, lw<span class="op">=</span><span class="fl">2.5</span>, label<span class="op">=</span><span class="st">'Reported profit (absorption)'</span>)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>ax.plot(prods<span class="op">/</span><span class="dv">1000</span>, varn, color<span class="op">=</span>GREEN, lw<span class="op">=</span><span class="fl">2.5</span>, ls<span class="op">=</span><span class="st">'--'</span>, label<span class="op">=</span><span class="st">'True economics (variable)'</span>)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>ax.axvline(sales<span class="op">/</span><span class="dv">1000</span>, color<span class="op">=</span><span class="st">'gray'</span>, ls<span class="op">=</span><span class="st">':'</span>, label<span class="op">=</span><span class="st">'Sales (fixed)'</span>)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Cars produced (000s)'</span>)<span class="op">;</span> ax.set_ylabel(<span class="st">'Reported quarterly profit ($m)'</span>)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Same sales, same costs — just build more, and "profit" rises'</span>)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>ax.legend()<span class="op">;</span> ax.grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">.3</span>)</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()<span class="op">;</span> plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="fig-overproduction" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-overproduction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-overproduction-output-1.png" width="1337" height="735" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-overproduction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Overproduce and absorption profit climbs — while the real economics (variable) stay flat.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>What just happened — name it
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Make more than you sell, and each unsold car carries a slice of fixed overhead <strong>off the income statement and into inventory</strong>. Reported profit rises <strong>without a single extra sale</strong> — the manager hit the bonus by <strong>building cars no one bought</strong>. This is <strong>earnings management through overproduction</strong> (a <em>real-activities</em> manipulation): legal, GAAP-compliant, and value-destroying — cash is now tied up in metal, and the inventory must eventually be sold or written down.</p>
+<p><strong>The floor takeaway (everyone leaves with this):</strong> producing more than you sell can <em>flatter</em> reported profit — which is the whole reason managers also watch <strong>variable costing</strong>, where the trick doesn’t work.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>▸ The same trick in T-accounts
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>If you read Session 1’s T-account aside, here is the overproduction quarter in that machinery — tracking the <strong>fixed overhead only</strong>; the cars’ variable costs flow through COGS as usual (build 150,000, sell 120,000; fixed overhead $1,200m at $8,000/car):</p>
+<pre><code>      INVENTORY (asset)                    COGS (expense → P&amp;L)
+      Dr      │      Cr                    Dr      │      Cr
+ (parked) 240 │                       (sold)  960  │
+  ────────────┼──────────             ─────────────┼──────────
+  bal     240 │                       bal      960 │</code></pre>
+<p>Only the $960m fixed-overhead slice in COGS reduces this quarter’s profit; the $240m sits in inventory as an asset. <strong>Next quarter, when those parked cars finally sell, the $240m moves Inventory → COGS</strong> — the trick never destroys the expense, it only <em>defers</em> it. (And if the cars never sell, the write-down lands even harder.)</p>
+</div>
+</div>
+</div>
+<p><strong>The deferral comes home.</strong> The parked cost <em>waits</em>. A small firm, two quarters, same trick — produce 10,000 then 12,000 units; sell 8,000 then 14,000; fixed overhead £20,000 a quarter (price £5; variable manufacturing cost £1/unit; variable marketing £0.20 per unit sold; fixed marketing £5,000; FIFO):</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 26%">
+<col style="width: 26%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Reported profit</th>
+<th style="text-align: right;">Q1 — produce &gt; sell</th>
+<th style="text-align: right;">Q2 — sell &gt; produce</th>
+<th style="text-align: right;">Both quarters</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Variable costing</strong></td>
+<td style="text-align: right;">£5,400</td>
+<td style="text-align: right;">£28,200</td>
+<td style="text-align: right;">£33,600</td>
+</tr>
+<tr class="even">
+<td><strong>Absorption costing</strong></td>
+<td style="text-align: right;">£9,400</td>
+<td style="text-align: right;">£24,200</td>
+<td style="text-align: right;"><strong>£33,600</strong></td>
+</tr>
+<tr class="odd">
+<td>The gap</td>
+<td style="text-align: right;"><strong>+£4,000</strong></td>
+<td style="text-align: right;"><strong>−£4,000</strong></td>
+<td style="text-align: right;"><strong>0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Q1’s flattery is exactly Q2’s hangover: the £4,000 parked in inventory (2,000 unsold units × £2 of fixed overhead at Q1’s £20,000 ÷ 10,000 rate) lands in profit the moment those units sell. <strong>Over the cycle the two systems agree — the trick only moves profit <em>between</em> periods</strong>, unless production keeps climbing, which is how inventory bloat and the eventual write-down start.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>From the research (LSE tradition)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Burgstahler &amp; Dichev (1997):</strong> across thousands of firms, there are <strong>suspiciously few small losses and too many small profits</strong> — a tell-tale “kink” at zero, as firms nudge results just over the line.</li>
+<li><strong>Roychowdhury (2006):</strong> firms facing a miss <strong>really do overproduce</strong> to push fixed cost into inventory and report higher margins — exactly the lever you just pulled.</li>
+</ul>
+</div>
+</div>
+<div id="cell-fig-burgstahler" class="cell" data-execution_count="11">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(<span class="dv">7</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> rng.normal(<span class="fl">0.01</span>, <span class="fl">0.03</span>, <span class="dv">60_000</span>)                       <span class="co"># scaled earnings</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> (e <span class="op">&gt;</span> <span class="op">-</span><span class="fl">0.012</span>) <span class="op">&amp;</span> (e <span class="op">&lt;</span> <span class="dv">0</span>) <span class="op">&amp;</span> (rng.random(<span class="bu">len</span>(e)) <span class="op">&lt;</span> <span class="fl">0.65</span>)   <span class="co"># firms nudge small losses over the line</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>e[mask] <span class="op">=</span> rng.uniform(<span class="fl">0.0</span>, <span class="fl">0.005</span>, size<span class="op">=</span>mask.<span class="bu">sum</span>())            <span class="co"># …into small PROFITS (the tell-tale kink)</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="fl">4.2</span>))</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>ax.hist(e, bins<span class="op">=</span>np.arange(<span class="op">-</span><span class="fl">0.10</span>, <span class="fl">0.12</span>, <span class="fl">0.005</span>), color<span class="op">=</span>BLUE, edgecolor<span class="op">=</span><span class="st">'white'</span>)</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, color<span class="op">=</span>TESLA_RED, lw<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Reported earnings (scaled)'</span>)<span class="op">;</span> ax.set_ylabel(<span class="st">'Number of firms'</span>)</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Too few small losses, too many small profits (illustrative)'</span>)</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="fl">0.10</span>, <span class="fl">0.11</span>)<span class="op">;</span> plt.tight_layout()<span class="op">;</span> plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="fig-burgstahler" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-burgstahler-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-burgstahler-output-1.png" width="1337" height="615" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-burgstahler-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Illustrative of Burgstahler &amp; Dichev (1997): a missing-small-losses ‘kink’ at zero earnings.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>This is a thread we pull again: in <strong>Session 5</strong> we ask <em>who is responsible</em> when results miss, and in <strong>Part 2</strong> how to design bonuses that don’t reward this kind of gaming.</p>
+<hr>
+<p><em>(Natural break point — ~10 minutes.)</em></p>
+<hr>
+</section>
+<section id="sec-act1" class="level1 page-columns page-full">
+<h1>The profitability puzzle</h1>
+<p>Tesla’s Fremont factory builds five models. Look at the <strong>per-car</strong> economics (price − direct materials, before any shared overhead):</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p><em>Stylised, simulated volumes, prices, materials and overhead pools:</em> we place all five models in one complex for a clean single-factory example. In reality the Cybertruck is built at Giga Texas, not Fremont — the pedagogy is unchanged.</p>
+</div></div><div id="load-data" class="cell" data-execution_count="12">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>pools <span class="op">=</span> pd.read_csv(<span class="st">'../../data/simulated/overhead_cost_pools.csv'</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>prod  <span class="op">=</span> pd.read_csv(<span class="st">'../../data/simulated/product_activity_drivers.csv'</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>prod[<span class="st">'Model'</span>] <span class="op">=</span> prod[<span class="st">'model'</span>].<span class="bu">str</span>.replace(<span class="st">'_'</span>, <span class="st">' '</span>)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="co"># NOT the full contribution margin (S2: price − variable cost) — materials only;</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co"># the shared overhead is missing, and splitting it is today's whole question</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>prod[<span class="st">'price_less_materials'</span>] <span class="op">=</span> prod[<span class="st">'avg_price_usd'</span>] <span class="op">-</span> prod[<span class="st">'direct_materials_per_unit'</span>]</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>show <span class="op">=</span> prod[[<span class="st">'Model'</span>, <span class="st">'annual_volume_fremont'</span>, <span class="st">'avg_price_usd'</span>,</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>             <span class="st">'direct_materials_per_unit'</span>, <span class="st">'price_less_materials'</span>]].copy()</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>show.columns <span class="op">=</span> [<span class="st">'Model'</span>, <span class="st">'Volume'</span>, <span class="st">'Price'</span>, <span class="st">'Materials'</span>, <span class="st">'Price − Materials'</span>]</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(show.to_string(index<span class="op">=</span><span class="va">False</span>))</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Shared Fremont overhead to split across all of them: $</span><span class="sc">{</span>pools[<span class="st">'annual_cost_millions'</span>]<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">:,.0f}</span><span class="ss"> m"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     Model  Volume  Price  Materials  Price − Materials
+   Model Y  650000  44000      18000              26000
+   Model 3  500000  39000      15000              24000
+   Model S   20000  89000      28000              61000
+   Model X   20000  99000      32000              67000
+Cybertruck   40000  80000      35000              45000
+
+Shared Fremont overhead to split across all of them: $9,200 m</code></pre>
+</div>
+</div>
+<p>A <strong>Model X</strong> clears <strong>$67,000</strong> per car before overhead; a <strong>Model Y</strong> only <strong>$26,000</strong>. So should Tesla pour the factory into premium cars?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Discussion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The five models share one <strong>$9.2 bn</strong> pot of factory overhead (assembly lines, battery plant, test labs, logistics, the building). <strong>How would you split that $9.2 bn across the models?</strong> Bring back a rule.</p>
+</div>
+</div>
+<p>Whatever rule you pick <strong>decides</strong> which model looks profitable. That’s the danger — and the lesson.</p>
+<section id="the-simplest-rule-split-by-volume-traditional-allocation" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="the-simplest-rule-split-by-volume-traditional-allocation">The simplest rule: split by volume (traditional allocation)</h2>
+<p>The most common method spreads overhead by <strong>production volume</strong> — one rate per car (accountants call it a <strong>plant-wide rate</strong>), on the logic “more cars, more cost.”</p>
+<div id="traditional" class="cell" data-execution_count="13">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>total_oh <span class="op">=</span> pools[<span class="st">'annual_cost_millions'</span>].<span class="bu">sum</span>() <span class="op">*</span> <span class="fl">1e6</span>        <span class="co"># $</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>total_vol <span class="op">=</span> prod[<span class="st">'annual_volume_fremont'</span>].<span class="bu">sum</span>()</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>rate <span class="op">=</span> total_oh <span class="op">/</span> total_vol                                 <span class="co"># $ per car, one blended rate</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>prod[<span class="st">'trad_oh'</span>]     <span class="op">=</span> rate</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>prod[<span class="st">'trad_cost'</span>]   <span class="op">=</span> prod[<span class="st">'direct_materials_per_unit'</span>] <span class="op">+</span> prod[<span class="st">'trad_oh'</span>]</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>prod[<span class="st">'trad_profit'</span>] <span class="op">=</span> prod[<span class="st">'avg_price_usd'</span>] <span class="op">-</span> prod[<span class="st">'trad_cost'</span>]</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>prod[<span class="st">'trad_margin'</span>] <span class="op">=</span> prod[<span class="st">'trad_profit'</span>] <span class="op">/</span> prod[<span class="st">'avg_price_usd'</span>] <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"One blended overhead rate = $</span><span class="sc">{</span>rate<span class="sc">:,.0f}</span><span class="ss"> per car</span><span class="ch">\n</span><span class="ss">"</span>)</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="st">'Model'</span><span class="sc">:&lt;12}{</span><span class="st">'Price'</span><span class="sc">:&gt;9}{</span><span class="st">'Materials'</span><span class="sc">:&gt;11}{</span><span class="st">'Overhead'</span><span class="sc">:&gt;10}{</span><span class="st">'Profit'</span><span class="sc">:&gt;10}{</span><span class="st">'Margin'</span><span class="sc">:&gt;8}</span><span class="ss">"</span>)</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"-"</span> <span class="op">*</span> <span class="dv">60</span>)</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _, r <span class="kw">in</span> prod.iterrows():</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>r[<span class="st">'Model'</span>]<span class="sc">:&lt;12}{</span><span class="st">'$'</span><span class="op">+</span><span class="bu">format</span>(r[<span class="st">'avg_price_usd'</span>], <span class="st">',.0f'</span>)<span class="sc">:&gt;9}</span><span class="ss">"</span></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>          <span class="ss">f"</span><span class="sc">{</span><span class="st">'$'</span><span class="op">+</span><span class="bu">format</span>(r[<span class="st">'direct_materials_per_unit'</span>], <span class="st">',.0f'</span>)<span class="sc">:&gt;11}</span><span class="ss">"</span></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>          <span class="ss">f"</span><span class="sc">{</span><span class="st">'$'</span><span class="op">+</span><span class="bu">format</span>(r[<span class="st">'trad_oh'</span>], <span class="st">',.0f'</span>)<span class="sc">:&gt;10}</span><span class="ss">"</span></span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>          <span class="ss">f"</span><span class="sc">{</span><span class="st">'$'</span><span class="op">+</span><span class="bu">format</span>(r[<span class="st">'trad_profit'</span>], <span class="st">',.0f'</span>)<span class="sc">:&gt;10}{</span>r[<span class="st">'trad_margin'</span>]<span class="sc">:&gt;7.0f}</span><span class="ss">%"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>One blended overhead rate = $7,480 per car
+
+Model           Price  Materials  Overhead    Profit  Margin
+------------------------------------------------------------
+Model Y       $44,000    $18,000    $7,480   $18,520     42%
+Model 3       $39,000    $15,000    $7,480   $16,520     42%
+Model S       $89,000    $28,000    $7,480   $53,520     60%
+Model X       $99,000    $32,000    $7,480   $59,520     60%
+Cybertruck    $80,000    $35,000    $7,480   $37,520     47%</code></pre>
+</div>
+</div>
+<p>Every model — Model Y or Model X — gets the same overhead charge.</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p><em>Simulated, stylised levels:</em> “profit” here = price − direct materials − allocated overhead only. The level is ~2.4× Tesla’s real 17.9% FY2024 gross margin you saw in Session 1 — read the <em>distribution</em> across models, not the level.</p>
+</div></div><div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Pause
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Every model looks healthy, and the premium models look <em>spectacular</em> (~60% margin). But ask the question that runs the rest of this session: <strong>does a Cybertruck really sip the same overhead as a Model 3?</strong></p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="sec-act2" class="level1 page-columns page-full">
+<h1>Activity-based costing &amp; the reveal</h1>
+<p>The models don’t consume the factory equally:</p>
+<div id="resource-gaps" class="cell" data-execution_count="14">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> prod[[<span class="st">'Model'</span>, <span class="st">'assembly_hours_per_unit'</span>, <span class="st">'kwh_capacity'</span>, <span class="st">'test_cycles_per_unit'</span>]].copy()</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>g.columns <span class="op">=</span> [<span class="st">'Model'</span>, <span class="st">'Assembly hrs'</span>, <span class="st">'Battery kWh'</span>, <span class="st">'Test cycles'</span>]</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(g.to_string(index<span class="op">=</span><span class="va">False</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     Model  Assembly hrs  Battery kWh  Test cycles
+   Model Y            12           75            3
+   Model 3            10           60            3
+   Model S            18          100            5
+   Model X            20          100            5
+Cybertruck            25          123            6</code></pre>
+</div>
+</div>
+<p>A Cybertruck uses <strong>2.5×</strong> the assembly hours of a Model 3 — but traditional costing charged it the <strong>same</strong> overhead.</p>
+<p>That mismatch has a name:</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Define it well
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Cross-subsidisation:</strong> when one product is charged <em>more</em> overhead than it really causes so that another is charged <em>less</em>. Under a single volume rate, <strong>high-volume simple products subsidise low-volume complex ones</strong> — the simple cars look worse than they are, the complex cars better.</p>
+</div>
+</div>
+<section id="activity-based-costing-abc-charge-each-cost-to-what-drives-it" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="activity-based-costing-abc-charge-each-cost-to-what-drives-it">Activity-based costing (ABC): charge each cost to what drives it</h2>
+<p>ABC splits overhead into <strong>cost pools</strong>, each with its own <strong>cost driver</strong> — the thing that actually causes that cost — then charges each model for the drivers it uses.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>In Excel (same answer, no code)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Download <a href="ac101-s3-cost-allocation.xlsx"><strong>ac101-s3-cost-allocation.xlsx</strong></a>: the <code>Calc</code> sheet builds the blended rate and the five ABC pool rates with <code>SUMPRODUCT</code>, then allocates to each model — all <strong>live formulas</strong>. Change Cybertruck’s assembly hours on the <code>Products</code> sheet and watch its cost and margin move.</p>
+</div>
+</div>
+</div>
+<p>One rate by hand before any code. The <strong>assembly</strong> pool costs <strong>$2,400 m</strong> a year, and the five models together use <strong>14.56 m assembly hours</strong> (each model’s hours per car × its volume, summed). So the rate is $2,400 m ÷ 14.56 m hours ≈ <strong>$165 per assembly hour</strong> — and a Cybertruck, at 25 hours, picks up 25 × $165 ≈ <strong>$4,100</strong> of assembly overhead alone. That’s the whole ABC mechanic.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Your turn — one ABC rate by hand
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Now you: the <strong>battery systems</strong> pool costs <strong>$3,200 m</strong> a year, and the five models together use <strong>87.67 m kWh</strong> of battery capacity. <strong>What’s the rate per kWh?</strong> Calculator only — exactly how the exam will ask it.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Reveal
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>$3,200 m ÷ 87.67 m kWh ≈ <strong>$36.50 per kWh</strong>. Check it against the ACTIVITY RATES table the next cell prints.</p>
+</div>
+</div>
+</div>
+<div id="abc" class="cell" data-execution_count="15">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Total activity for each driver</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>prod[<span class="st">'tot_assembly'</span>] <span class="op">=</span> prod[<span class="st">'annual_volume_fremont'</span>] <span class="op">*</span> prod[<span class="st">'assembly_hours_per_unit'</span>]</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>prod[<span class="st">'tot_kwh'</span>]      <span class="op">=</span> prod[<span class="st">'annual_volume_fremont'</span>] <span class="op">*</span> prod[<span class="st">'kwh_capacity'</span>]</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>prod[<span class="st">'tot_tests'</span>]    <span class="op">=</span> prod[<span class="st">'annual_volume_fremont'</span>] <span class="op">*</span> prod[<span class="st">'test_cycles_per_unit'</span>]</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>driver_tot <span class="op">=</span> {<span class="st">'assembly_hours'</span>: prod[<span class="st">'tot_assembly'</span>].<span class="bu">sum</span>(),</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>              <span class="st">'kwh_capacity'</span>:   prod[<span class="st">'tot_kwh'</span>].<span class="bu">sum</span>(),</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>              <span class="st">'test_cycles'</span>:    prod[<span class="st">'tot_tests'</span>].<span class="bu">sum</span>(),</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>              <span class="st">'shipments'</span>:      prod[<span class="st">'annual_volume_fremont'</span>].<span class="bu">sum</span>(),</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>              <span class="st">'facility_floor'</span>: prod[<span class="st">'annual_volume_fremont'</span>].<span class="bu">sum</span>()}</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Rate for each pool = pool cost / total driver volume</span></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>rate_of <span class="op">=</span> {p[<span class="st">'cost_pool'</span>]: p[<span class="st">'annual_cost_millions'</span>]<span class="op">*</span><span class="fl">1e6</span> <span class="op">/</span> driver_tot[p[<span class="st">'cost_driver'</span>]]</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>           <span class="cf">for</span> _, p <span class="kw">in</span> pools.iterrows()}</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"ACTIVITY RATES (cost per unit of driver)"</span>)</span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _, p <span class="kw">in</span> pools.iterrows():</span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  </span><span class="sc">{</span>p[<span class="st">'cost_pool'</span>]<span class="sc">:&lt;16}</span><span class="ss"> $</span><span class="sc">{</span>rate_of[p[<span class="st">'cost_pool'</span>]]<span class="sc">:&gt;10,.2f}</span><span class="ss"> per </span><span class="sc">{</span>p[<span class="st">'driver_unit'</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Allocate to each model</span></span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>prod[<span class="st">'abc_oh'</span>] <span class="op">=</span> (prod[<span class="st">'assembly_hours_per_unit'</span>] <span class="op">*</span> rate_of[<span class="st">'assembly'</span>]</span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a>                  <span class="op">+</span> prod[<span class="st">'kwh_capacity'</span>]          <span class="op">*</span> rate_of[<span class="st">'battery_systems'</span>]</span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a>                  <span class="op">+</span> prod[<span class="st">'test_cycles_per_unit'</span>]  <span class="op">*</span> rate_of[<span class="st">'quality_testing'</span>]</span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a>                  <span class="op">+</span> rate_of[<span class="st">'logistics'</span>] <span class="op">+</span> rate_of[<span class="st">'facilities'</span>])</span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a>prod[<span class="st">'abc_profit'</span>] <span class="op">=</span> prod[<span class="st">'avg_price_usd'</span>] <span class="op">-</span> prod[<span class="st">'direct_materials_per_unit'</span>] <span class="op">-</span> prod[<span class="st">'abc_oh'</span>]</span>
+<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a>prod[<span class="st">'abc_margin'</span>] <span class="op">=</span> prod[<span class="st">'abc_profit'</span>] <span class="op">/</span> prod[<span class="st">'avg_price_usd'</span>] <span class="op">*</span> <span class="dv">100</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>ACTIVITY RATES (cost per unit of driver)
+  assembly         $    164.84 per hours
+  battery_systems  $     36.50 per kWh
+  quality_testing  $    205.66 per cycles
+  logistics        $    975.61 per vehicles
+  facilities       $  1,300.81 per vehicle</code></pre>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>Honesty caveat on the rates: logistics &amp; facilities are charged per vehicle — our simulated logistics ships cars individually, so shipments ≈ vehicles here; in reality cars move in multi-car transporter batches, a true batch-level driver. Facilities is a facility-level cost spread by volume as a floor-space proxy, not a true square-foot driver.</p>
+</div></div><p>Then, still in the jump-out: <strong>read Part C</strong> of <a href="tesla-case-part-c.pdf"><em>Five Days at Fremont</em></a> — Wednesday at Fremont re-tells this morning: the pricing team’s email, the $9,200m pot, and the costing team’s part-finished comparison as Exhibit C-3, no answers. Its seven questions — and their full solutions — are at the foot of this page.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Commit before the reveal
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Write it down — one line: <strong>which model’s margin falls most under ABC?</strong> Keep it in front of you; we’ll see who called it.</p>
+</div>
+</div>
+<div id="reveal" class="cell" data-execution_count="16">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"THE REVEAL — traditional vs ABC"</span>)</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"="</span> <span class="op">*</span> <span class="dv">64</span>)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="st">'Model'</span><span class="sc">:&lt;12}{</span><span class="st">'Trad OH'</span><span class="sc">:&gt;10}{</span><span class="st">'ABC OH'</span><span class="sc">:&gt;10}{</span><span class="st">'Δ OH'</span><span class="sc">:&gt;10}{</span><span class="st">'Trad mgn'</span><span class="sc">:&gt;10}{</span><span class="st">'ABC mgn'</span><span class="sc">:&gt;10}</span><span class="ss">"</span>)</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"-"</span> <span class="op">*</span> <span class="dv">64</span>)</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _, r <span class="kw">in</span> prod.iterrows():</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    d <span class="op">=</span> r[<span class="st">'abc_oh'</span>] <span class="op">-</span> r[<span class="st">'trad_oh'</span>]</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>r[<span class="st">'Model'</span>]<span class="sc">:&lt;12}{</span><span class="st">'$'</span><span class="op">+</span><span class="bu">format</span>(r[<span class="st">'trad_oh'</span>], <span class="st">',.0f'</span>)<span class="sc">:&gt;10}</span><span class="ss">"</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>          <span class="ss">f"</span><span class="sc">{</span><span class="st">'$'</span><span class="op">+</span><span class="bu">format</span>(r[<span class="st">'abc_oh'</span>], <span class="st">',.0f'</span>)<span class="sc">:&gt;10}{</span>d<span class="sc">:&gt;+10,.0f}</span><span class="ss">"</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>          <span class="ss">f"</span><span class="sc">{</span>r[<span class="st">'trad_margin'</span>]<span class="sc">:&gt;9.0f}</span><span class="ss">%</span><span class="sc">{</span>r[<span class="st">'abc_margin'</span>]<span class="sc">:&gt;9.0f}</span><span class="ss">%"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>THE REVEAL — traditional vs ABC
+================================================================
+Model          Trad OH    ABC OH      Δ OH  Trad mgn   ABC mgn
+----------------------------------------------------------------
+Model Y         $7,480    $7,609      +129       42%       42%
+Model 3         $7,480    $6,732      -748       42%       44%
+Model S         $7,480    $9,922    +2,442       60%       57%
+Model X         $7,480   $10,251    +2,772       60%       57%
+Cybertruck      $7,480   $12,121    +4,641       47%       41%</code></pre>
+</div>
+</div>
+<div id="cell-fig-reveal" class="cell" data-execution_count="17">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">13</span>, <span class="dv">5</span>))</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="bu">len</span>(prod))<span class="op">;</span> w <span class="op">=</span> <span class="fl">0.38</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>].bar(x<span class="op">-</span>w<span class="op">/</span><span class="dv">2</span>, prod[<span class="st">'trad_oh'</span>]<span class="op">/</span><span class="dv">1000</span>, w, label<span class="op">=</span><span class="st">'Traditional'</span>, color<span class="op">=</span>BLUE, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>].bar(x<span class="op">+</span>w<span class="op">/</span><span class="dv">2</span>, prod[<span class="st">'abc_oh'</span>]<span class="op">/</span><span class="dv">1000</span>,  w, label<span class="op">=</span><span class="st">'ABC'</span>,         color<span class="op">=</span>TESLA_RED, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>].set_title(<span class="st">'Overhead per car ($000s)'</span>)<span class="op">;</span> ax[<span class="dv">0</span>].set_xticks(x)</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>].set_xticklabels(prod[<span class="st">'Model'</span>], rotation<span class="op">=</span><span class="dv">15</span>)<span class="op">;</span> ax[<span class="dv">0</span>].legend()<span class="op">;</span> ax[<span class="dv">0</span>].grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">.3</span>, axis<span class="op">=</span><span class="st">'y'</span>)</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>].bar(x<span class="op">-</span>w<span class="op">/</span><span class="dv">2</span>, prod[<span class="st">'trad_margin'</span>], w, label<span class="op">=</span><span class="st">'Traditional'</span>, color<span class="op">=</span>BLUE, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>].bar(x<span class="op">+</span>w<span class="op">/</span><span class="dv">2</span>, prod[<span class="st">'abc_margin'</span>],  w, label<span class="op">=</span><span class="st">'ABC'</span>,         color<span class="op">=</span>TESLA_RED, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>].set_title(<span class="st">'Profit margin (%)'</span>)<span class="op">;</span> ax[<span class="dv">1</span>].set_xticks(x)</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>].set_xticklabels(prod[<span class="st">'Model'</span>], rotation<span class="op">=</span><span class="dv">15</span>)<span class="op">;</span> ax[<span class="dv">1</span>].legend()<span class="op">;</span> ax[<span class="dv">1</span>].grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">.3</span>, axis<span class="op">=</span><span class="st">'y'</span>)</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()<span class="op">;</span> plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="fig-reveal" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-reveal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-reveal-output-1.png" width="1936" height="735" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-reveal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: ABC moves overhead from the simple high-volume cars onto the complex low-volume ones.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>What actually moved (read after running)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Nobody flips to a loss — Tesla’s premium cars are genuinely high-margin. But ABC <strong>shifts overhead off Model 3 and onto S, X and especially Cybertruck</strong> (Model Y barely moves), whose margins fall the most. The lesson is in the next cell: where the profit actually comes from.</p>
+</div>
+</div>
+<div id="where-profit" class="cell" data-execution_count="18">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>prod[<span class="st">'abc_annual'</span>] <span class="op">=</span> prod[<span class="st">'abc_profit'</span>] <span class="op">*</span> prod[<span class="st">'annual_volume_fremont'</span>] <span class="op">/</span> <span class="fl">1e9</span>   <span class="co"># $bn</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>tot <span class="op">=</span> prod[<span class="st">'abc_annual'</span>].<span class="bu">sum</span>()</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"WHERE TESLA'S PROFIT REALLY COMES FROM (ABC, annual)"</span>)</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"="</span> <span class="op">*</span> <span class="dv">56</span>)</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="st">'Model'</span><span class="sc">:&lt;12}{</span><span class="st">'Profit/car'</span><span class="sc">:&gt;12}{</span><span class="st">'Volume'</span><span class="sc">:&gt;10}{</span><span class="st">'Annual $bn'</span><span class="sc">:&gt;12}{</span><span class="st">'</span><span class="sc">% o</span><span class="st">f total'</span><span class="sc">:&gt;12}</span><span class="ss">"</span>)</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"-"</span> <span class="op">*</span> <span class="dv">56</span>)</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _, r <span class="kw">in</span> prod.sort_values(<span class="st">'abc_annual'</span>, ascending<span class="op">=</span><span class="va">False</span>).iterrows():</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>r[<span class="st">'Model'</span>]<span class="sc">:&lt;12}</span><span class="ss">$</span><span class="sc">{</span>r[<span class="st">'abc_profit'</span>]<span class="sc">:&gt;10,.0f}{</span>r[<span class="st">'annual_volume_fremont'</span>]<span class="sc">:&gt;10,.0f}</span><span class="ss">"</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>          <span class="ss">f"</span><span class="sc">{</span>r[<span class="st">'abc_annual'</span>]<span class="sc">:&gt;11.1f}{</span>r[<span class="st">'abc_annual'</span>]<span class="op">/</span>tot<span class="op">*</span><span class="dv">100</span><span class="sc">:&gt;11.0f}</span><span class="ss">%"</span>)</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"-"</span> <span class="op">*</span> <span class="dv">56</span>)</span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>y3_profit <span class="op">=</span> prod[prod[<span class="st">'model'</span>].isin([<span class="st">'Model_Y'</span>,<span class="st">'Model_3'</span>])][<span class="st">'abc_annual'</span>].<span class="bu">sum</span>()</span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Model Y + Model 3 together: </span><span class="sc">{</span>y3_profit<span class="op">/</span>tot<span class="op">*</span><span class="dv">100</span><span class="sc">:.0f}</span><span class="ss">% of all profit."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>WHERE TESLA'S PROFIT REALLY COMES FROM (ABC, annual)
+========================================================
+Model         Profit/car    Volume  Annual $bn  % of total
+--------------------------------------------------------
+Model Y     $    18,391   650,000       12.0         50%
+Model 3     $    17,268   500,000        8.6         36%
+Cybertruck  $    32,879    40,000        1.3          5%
+Model X     $    56,749    20,000        1.1          5%
+Model S     $    51,078    20,000        1.0          4%
+--------------------------------------------------------
+Model Y + Model 3 together: 86% of all profit.</code></pre>
+</div>
+</div>
+<p><em>(Same stylised levels as before: the $bn are simulated — read the <strong>shares</strong>, not the totals.)</em></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Resolution — who’s the profit engine?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The flashy per-car margins belong to S/X — but they’re a small slice in <em>total</em> (~9% between them). <strong>Model Y and Model 3 are ~86% of the profit in our simulated Fremont world</strong> — directionally right for the real Tesla, where the 3/Y are ~95% of volume. The humble volume cars carry the company; the premium cars are a high-margin garnish, and the Cybertruck earns far less than its sticker suggests. <em>“Most profitable per car” and “where the money is” are different questions</em> — the volume cars win mostly on sheer volume, and ABC then sharpens the picture, deflating the premium cars’ apparent margins.</p>
+</div>
+</div>
+</section>
+<section id="why-those-drivers-the-cost-hierarchy" class="level2">
+<h2 class="anchored" data-anchor-id="why-those-drivers-the-cost-hierarchy">Why those drivers? The cost hierarchy</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Define it well (Cooper &amp; Kaplan, 1991)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Overhead sits at different <strong>levels</strong>, and the right driver depends on the level:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Level</th>
+<th>Caused by…</th>
+<th>Tesla example</th>
+<th>Driver</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Unit</strong></td>
+<td>each unit made</td>
+<td>assembly labour, battery-plant machine time</td>
+<td>hours, kWh</td>
+</tr>
+<tr class="even">
+<td><strong>Batch</strong></td>
+<td>each <em>batch/run</em></td>
+<td>a production set-up, a delivery shipment</td>
+<td>set-ups, shipments</td>
+</tr>
+<tr class="odd">
+<td><strong>Product</strong></td>
+<td>each <em>product line</em> existing</td>
+<td>Cybertruck’s unique tooling &amp; engineering</td>
+<td>per model</td>
+</tr>
+<tr class="even">
+<td><strong>Facility</strong></td>
+<td>the <em>plant</em> existing</td>
+<td>the Fremont building</td>
+<td>(can’t be caused away — spread by volume)</td>
+</tr>
+</tbody>
+</table>
+<p>Volume allocation charges <em>everything</em> as if it were unit-level. That’s exactly why low-volume complex models (their <strong>batch</strong>- and <strong>product</strong>-level costs spread over few units) are under-costed — and why ABC, which respects the hierarchy, corrects it.</p>
+</div>
+</div>
+</section>
+<section id="your-turn-the-exams-shape-cold" class="level2">
+<h2 class="anchored" data-anchor-id="your-turn-the-exams-shape-cold">Your turn — the exam’s shape, cold</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Commit to numbers
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Verdant Cycles</strong> builds two e-bikes: <strong>Metro</strong> (8,000 units a year) and <strong>Trail</strong> (2,000 units). Production overhead, analysed into three activity cost pools:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Activity cost pool</th>
+<th style="text-align: right;">Cost (£)</th>
+<th>Cost driver</th>
+<th style="text-align: right;">Annual driver volume</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Assembly</td>
+<td style="text-align: right;">425,000</td>
+<td>assembly hours</td>
+<td style="text-align: right;">17,000 hours</td>
+</tr>
+<tr class="even">
+<td>Set-ups</td>
+<td style="text-align: right;">90,000</td>
+<td>production runs</td>
+<td style="text-align: right;">60 runs</td>
+</tr>
+<tr class="odd">
+<td>Quality inspection</td>
+<td style="text-align: right;">60,000</td>
+<td>inspections</td>
+<td style="text-align: right;">500 inspections</td>
+</tr>
+</tbody>
+</table>
+<p>Per unit, a Metro uses <strong>1.5 assembly hours</strong>, a Trail <strong>2.5</strong>. Trail’s small runs take <strong>40 of the 60 runs</strong> and <strong>300 of the 500 inspections</strong>.</p>
+<p><strong>(a)</strong> The three pool rates. <strong>(b)</strong> Overhead per unit for each bike. <strong>(c)</strong> The plant-wide rate per unit (10,000 units) — and which bike the single rate flatters. <em>Calculator only — the exam’s Section B shape.</em></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Reveal
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>(a)</strong> Assembly £425,000 ÷ 17,000 = <strong>£25/hour</strong> · set-ups £90,000 ÷ 60 = <strong>£1,500/run</strong> · inspection £60,000 ÷ 500 = <strong>£120/inspection</strong>. <strong>(b)</strong> <strong>Trail:</strong> 2.5 × 25 + (40 × 1,500) ÷ 2,000 + (300 × 120) ÷ 2,000 = 62.50 + 30.00 + 18.00 = <strong>£110.50</strong>. <strong>Metro:</strong> 1.5 × 25 + (20 × 1,500) ÷ 8,000 + (200 × 120) ÷ 8,000 = 37.50 + 3.75 + 3.00 = <strong>£44.25</strong>. <strong>(c)</strong> Plant-wide £575,000 ÷ 10,000 = <strong>£57.50 per unit</strong> — the single rate <strong>flatters Trail</strong> (charged 57.50, causes 110.50): its small runs are batch-hungry, and Metro pays the difference. Cross-subsidisation — Fremont’s lesson, at exam scale. Sanity check: 8,000 × 44.25 + 2,000 × 110.50 = <strong>£575,000</strong> — the pot always reconciles.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="the-trap-should-tesla-drop-the-cybertruck" class="level2">
+<h2 class="anchored" data-anchor-id="the-trap-should-tesla-drop-the-cybertruck">The trap: should Tesla drop the Cybertruck?</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Discussion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Cybertruck looks weakest under ABC — suppose Tesla drops it. <strong>Which of the $9.2 bn of pools actually disappear?</strong> Go pool by pool — assembly lines, battery plant, test labs, logistics, the building — and bring back a number.</p>
+</div>
+</div>
+<p>Debrief, then run the check:</p>
+<div id="discontinue" class="cell" data-execution_count="19">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>cyber <span class="op">=</span> prod[prod[<span class="st">'model'</span>] <span class="op">==</span> <span class="st">'Cybertruck'</span>].iloc[<span class="dv">0</span>]</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>cyber_oh_annual <span class="op">=</span> cyber[<span class="st">'abc_oh'</span>] <span class="op">*</span> cyber[<span class="st">'annual_volume_fremont'</span>] <span class="op">/</span> <span class="fl">1e6</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>others_vol <span class="op">=</span> prod.loc[prod[<span class="st">'model'</span>] <span class="op">!=</span> <span class="st">'Cybertruck'</span>, <span class="st">'annual_volume_fremont'</span>].<span class="bu">sum</span>()</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"DISCONTINUATION CHECK — Cybertruck"</span>)</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  Weakest margin under ABC:           </span><span class="sc">{</span>cyber[<span class="st">'abc_margin'</span>]<span class="sc">:.0f}</span><span class="ss">%"</span>)</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  Overhead ABC allocates to it:       $</span><span class="sc">{</span>cyber_oh_annual<span class="sc">:,.0f}</span><span class="ss"> m/yr"</span>)</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  Worst-case reload onto survivors:   +$</span><span class="sc">{</span>cyber_oh_annual<span class="op">*</span><span class="fl">1e6</span><span class="op">/</span>others_vol<span class="sc">:,.0f}</span><span class="ss"> per car"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>DISCONTINUATION CHECK — Cybertruck
+  Weakest margin under ABC:           41%
+  Overhead ABC allocates to it:       $485 m/yr
+  Worst-case reload onto survivors:   +$407 per car</code></pre>
+</div>
+</div>
+<p>But <strong>allocated ≠ avoidable</strong>. Most of the $9.2 bn is shared, committed capacity — the building, the assembly lines, the battery plant — it stays whether or not Cybertruck exists. <em>Worst case</em> (assume <strong>none</strong> of it is avoidable): the full pot must now be carried by fewer cars — <strong>$485m ÷ 1,190,000 survivors ≈ +$407 each</strong> — and now another model looks weak…</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>The death spiral
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Drop a product because <em>allocated</em> cost makes it look weak → its overhead reloads onto the survivors → now another looks weak → drop that → … until nothing is “profitable.” The error: allocated cost ≠ <strong>avoidable</strong> cost. Only costs that genuinely <em>disappear</em> matter for a drop decision — which is exactly <strong>Session 4</strong>.</p>
+</div>
+</div>
+</section>
+<section id="coming-next-session-4" class="level2">
+<h2 class="anchored" data-anchor-id="coming-next-session-4">Coming next → Session 4</h2>
+<p>We now know <em>which models</em> pay, and that allocated cost can mislead a drop decision. <strong>So which costs actually matter when you make a decision</strong> — make-or-buy, special orders, dropping a line? When should Tesla make its own batteries, and when buy from Panasonic? That’s relevant-cost analysis, next time.</p>
+<p><em>(Natural break point — ~10 minutes.)</em></p>
+<hr>
+</section>
+<section id="key-takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="key-takeaways">Key takeaways</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Key takeaways
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>How you allocate shared overhead decides which product looks profitable.</strong> A single volume rate causes <strong>cross-subsidisation</strong>.</li>
+<li><strong>ABC</strong> charges each cost pool by the <strong>driver</strong> that causes it; respecting the <strong>cost hierarchy</strong> (unit/batch/product/facility) is <em>why</em> complex low-volume products are under-costed by volume allocation.</li>
+<li>ABC changes the <em>distribution</em> of profit, not the <strong>total</strong> — but the distribution is the decision-relevant part. <strong>Model Y + Model 3 are ~86% of the profit in our simulated Fremont world</strong> — directionally right for the real Tesla, where the 3/Y are ~95% of volume.</li>
+<li><strong>Allocated cost ≠ avoidable cost.</strong> Dropping a product on allocated cost invites the <strong>death spiral</strong> (→ Session 4).</li>
+<li><strong>Absorption costing is mandatory for external reports</strong> (IAS 2) — and because it parks fixed overhead in inventory, <strong>overproduction can inflate reported profit</strong>: legal, real, value-destroying, and self-reversing when the units finally sell. Managers watch <strong>variable costing</strong> alongside it.</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Tesla case — Part C
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Part C — “Wednesday: one factory, five models, one pot of overhead”</strong> of the week-long Tesla case, <a href="tesla-case-part-c.pdf"><em>Five Days at Fremont</em></a> (also on <strong>Moodle</strong>) — read during the ABC hands-on. Seven questions, in order: <strong>C1</strong> (the plant-wide rate), <strong>C2</strong> (two ABC rates by calculator), <strong>C3</strong> (the Cybertruck column), <strong>C4</strong> (where the money lives — and the drop-the-Cybertruck trap), <strong>▸ C5</strong> (the absorption-costing discovery), <strong>C6</strong> (auditing the $9,200m pot), <strong>C7</strong> (round two of the death spiral). The session ran out of clock before the group work, so <strong>every solution is written out in full below</strong>, with the common slips named. Work each question with a calculator first, then open it.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Part C — full solutions, C1 to C7
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>C1 — the plant-wide rate.</strong> One pot, one volume, one rate: $9,200m ÷ 1,230,000 cars = <strong>$7,480 per car</strong> — every model carries the same. Model 3: 39,000 − 15,000 − 7,480 = <strong>$16,520</strong> a car (margin ≈ 42%). Model X: 99,000 − 32,000 − 7,480 = <strong>$59,520</strong> a car (margin ≈ 60%). “Pour the factory into premium,” surely — the verdict C4 unravels. <em>Common slip: taking margin on <strong>cost</strong> (16,520 ÷ 22,480 = 73%) instead of on price.</em></p>
+<p><strong>C2 — two ABC rates by calculator.</strong> One pool, one causal driver, one division — exactly how the exam asks it. Battery systems: $3,200m ÷ 87.67m kWh = <strong>$36.50 per kWh</strong>. Assembly: $2,400m ÷ 14.56m hours = <strong>$164.84 per hour</strong>. Units in millions on <strong>both</strong> sides. $3,200,000,000 ÷ 87.67 gives “$36.5m per kWh” — the sanity check catches it: a 75 kWh pack at $36.50 carries ≈ $2,700 of battery-plant overhead, which is plausible; $2.7bn a car is not. <em>Where the driver totals come from:</em> hours = Σ(volume × hrs per car) = 14.56m; kWh = Σ(volume × kWh per car) = 87.67m.</p>
+<p><strong>C3 — the Cybertruck column.</strong> Five pools — two rates you computed, three given in Exhibit C-3:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Pool</th>
+<th>Consumption</th>
+<th>Rate</th>
+<th style="text-align: right;">$/car</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Assembly</td>
+<td>25 hrs</td>
+<td>$164.84</td>
+<td style="text-align: right;">4,120.88</td>
+</tr>
+<tr class="even">
+<td>Battery systems</td>
+<td>123 kWh</td>
+<td>$36.50</td>
+<td style="text-align: right;">4,489.56</td>
+</tr>
+<tr class="odd">
+<td>Quality testing</td>
+<td>6 cycles</td>
+<td>$205.66</td>
+<td style="text-align: right;">1,233.93</td>
+</tr>
+<tr class="even">
+<td>Logistics</td>
+<td>1 vehicle</td>
+<td>$975.61</td>
+<td style="text-align: right;">975.61</td>
+</tr>
+<tr class="odd">
+<td>Facilities</td>
+<td>1 vehicle</td>
+<td>$1,300.81</td>
+<td style="text-align: right;">1,300.81</td>
+</tr>
+<tr class="even">
+<td><strong>ABC overhead per car</strong></td>
+<td></td>
+<td></td>
+<td style="text-align: right;"><strong>≈ $12,121</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Profit per car: 80,000 − 35,000 − 12,121 = <strong>$32,879</strong> → margin <strong>41%</strong>, against <strong>47%</strong> under the volume rate. Annual ≈ $1.3bn, ≈ 5% of the total. <em>The paragraph:</em> the $4,641 gap (12,121 − 7,480) was being paid by the simple, high-volume cars — <strong>cross-subsidisation</strong>. Batch- and product-level activity was spread as though it were unit-level — the <strong>cost hierarchy</strong> names why. <em>The usual slip:</em> dropping the two per-vehicle pools ($2,276.42) gives ≈ $9,844 — the margin falls, but the sign never flips. <em>Rounding:</em> the $/car cells use unrounded rates; cross-multiplying the printed rounded rates gives the same ≈ $12,121. <em>The line to keep:</em> ABC did not change total overhead by a dollar — it changed <strong>who carries it</strong>. Complexity, not just volume, drives the pot.</p>
+<p><strong>C4 — where the money lives, and the reply.</strong> Profit = per-car margin × volume. A Model X’s $56,749 × 20,000 ≈ <strong>$1.1bn</strong>; a Model Y’s $18,391 × 650,000 ≈ <strong>$12.0bn</strong> → <strong>Model Y + Model 3 ≈ 86%</strong> of the ≈ $24.1bn total. Both sentences hold; they answer different questions.</p>
+<blockquote class="blockquote">
+<p><em>“The ≈ $485m is what ABC <strong>allocates</strong> to the Cybertruck, not what we would <strong>save</strong> — pool by pool, almost none of it dies with the model: the building stays, the battery plant’s capacity is committed, the lines and labs are shared; only some logistics genuinely goes. Worst case the full ≈ $485m re-spreads over the 1,190,000 surviving cars at ≈ +$407 each, and that road ends in the death spiral. Since Model Y + Model 3 already carry ≈ 86% of the profit, the question isn’t the Cybertruck’s margin — it’s which costs would actually disappear, and nothing we computed today answers that.”</em></p>
+</blockquote>
+<p><em>Why that scores full marks:</em> <strong>allocated ≠ avoidable</strong>, argued <strong>pool by pool</strong> · the reload spread over the <strong>survivors</strong>, not the 40,000 · the endgame named. <em>Pool by pool, if you want the figures:</em> facilities ≈ $52m (the building stays) · battery ≈ $180m (capacity committed) · assembly ≈ $165m (shared lines) · testing ≈ $49m (largely shared) · logistics ≈ $39m (the most genuinely avoidable). <em>Slips:</em> treating allocated overhead as a cash saving; and “so Model X matters most” — the per-car and total rankings are different orderings.</p>
+<p><strong>▸ C5 — the absorption trick.</strong> Sales fixed at 120,000; the bonus rides on <strong>absorption-costing</strong> profit (fixed overhead baked into each car’s cost). Produce 120,000: fixed overhead per car = $1,200m ÷ 120,000 = $10,000 → (45,000 − 30,000 − 10,000) × 120,000 = <strong>$600m</strong>. <strong>Variable costing</strong> — fixed overhead expensed in full each period, never parked in a unit — agrees: <strong>$600m</strong>. Produce 150,000, sell 120,000: the pot spreads thinner, $1,200m ÷ 150,000 = <strong>$8,000</strong> a car → (45,000 − 30,000 − 8,000) × 120,000 = <strong>$840m</strong>. Variable costing still says <strong>$600m</strong>. The missing <strong>$240m</strong> = 30,000 unsold cars × $8,000, parked in <strong>inventory</strong> — “the cost <em>waits</em>”, weaponised. Name it: <strong>earnings management through overproduction</strong> (Roychowdhury 2006, <em>JAE</em>) — a <em>real-activities</em> manipulation: legal (absorption is what external reporting requires), value-destroying (cash tied up in unsold metal, write-down risk), and self-reversing when the cars finally sell. <em>Slips:</em> computing the produce-150,000 profit on 150,000 <em>sold</em> (demand is fixed at 120,000); claiming variable-costing profit also rises; saying the $240m “disappeared” — it sits in inventory and hits COGS when the cars sell, or worse, as a write-down. <em>The line everyone leaves with:</em> producing more than you sell can <strong>flatter</strong> reported profit — which is why managers also watch variable costing, where the trick does not work.</p>
+<p><strong>C6 — audit the pot.</strong> Exhibit C-4’s working list totals $12,000m; the pot we used all day was $9,200m. Three lines do not belong, for three different reasons:</p>
+<ul>
+<li><strong>Head-office administration + national advertising ($1,900m)</strong> — a <strong>period cost</strong> (SG&amp;A): it sits below gross profit and is caused by no car.</li>
+<li><strong>Paint-shop retooling, completed last year ($600m)</strong> — <strong>sunk</strong>: a past cost never enters this period’s production overhead.</li>
+<li><strong>Battery-plant electricity ($300m)</strong> — a <strong>double-count</strong>: metered separately, but already inside the $3,200m battery pool.</li>
+</ul>
+<p>12,000 − 1,900 − 600 − 300 = <strong>$9,200m</strong>, and the $7,480 rate is unchanged. <strong>An allocation can be wrong before you pick a single driver — audit the numerator first.</strong> <em>Slips:</em> striking <strong>Facilities</strong> on “the building isn’t caused by any car” — facility-level cost <strong>is</strong> production overhead, the hierarchy’s bottom row; keeping the $1,900m because “advertising helps sell cars”; adding the $300m to the battery pool instead of recognising it is already inside.</p>
+<p><strong>C7 — run the rule a second time.</strong> The CFO drops the Cybertruck anyway. Worst case nothing is saved, so the dead model’s share re-spreads: <strong>≈ $485m ÷ 1,190,000 survivors ≈ +$407</strong> onto every survivor’s ABC overhead.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 26%">
+<col style="width: 26%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th style="text-align: right;">ABC o/h per car</th>
+<th style="text-align: right;">Profit per car</th>
+<th style="text-align: right;">Margin</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Model Y</td>
+<td style="text-align: right;">7,609 → 8,016</td>
+<td style="text-align: right;">44,000 − 18,000 − 8,016 = 17,984</td>
+<td style="text-align: right;"><strong>≈ 41%</strong> (was 42%)</td>
+</tr>
+<tr class="even">
+<td>Model 3</td>
+<td style="text-align: right;">6,732 → 7,139</td>
+<td style="text-align: right;">39,000 − 15,000 − 7,139 = 16,861</td>
+<td style="text-align: right;">≈ 43% (was 44%)</td>
+</tr>
+<tr class="odd">
+<td>Model S</td>
+<td style="text-align: right;">9,922 → 10,329</td>
+<td style="text-align: right;">89,000 − 28,000 − 10,329 = 50,671</td>
+<td style="text-align: right;">≈ 57%</td>
+</tr>
+<tr class="even">
+<td>Model X</td>
+<td style="text-align: right;">10,251 → 10,658</td>
+<td style="text-align: right;">99,000 − 32,000 − 10,658 = 56,342</td>
+<td style="text-align: right;">≈ 57%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>New weakest: Model Y at ≈ 41%</strong> — the plant’s biggest profit engine (≈ $12.0bn a year, ≈ 50% of total profit). <em>Stated assumption: the worst case, none of the ≈ $485m avoidable. Any avoidable slice shrinks the reload, and the spiral.</em> Each drop shrinks the car base while the committed pot barely moves — the per-car burden rises and the <strong>next</strong> model looks weakest. <strong>Run the rule twice and it scraps the crown jewel: never decide a discontinuation off an allocation.</strong> <em>Slips:</em> dividing the $485m by 40,000, the Cybertruck’s own volume ($12,121 — circular); concluding “so drop Model Y” (it is the biggest <strong>total</strong> earner; per-car margin is not the objective); not stating the avoidability assumption. <em>Robustness:</em> re-spread the $485m by drivers instead of flat and Model Y overhead ≈ $8,035 (margin 40.8%), Model 3 ≈ $7,101 (margin 43.3%) — Model Y is <strong>still</strong> the new weakest. The punchline does not depend on the flat reload.</p>
+<p><strong>The honest answer.</strong> Part C’s verdict stands with its labels on: the figures are <strong>simulated</strong> and the margin levels stylised (≈ 2.4× Tesla’s real FY2024 gross margin — read distributions, not levels); the reload is a labelled <strong>worst case</strong> (none of the $485m avoidable); and “which costs actually disappear” is a question <strong>nothing computed in Part C can answer</strong>. An allocation is a <strong>choice</strong>, not a measurement. Say the choice out loud — the rule, the proxies, the worst case — and the number stays honest.</p>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/fmcetin\.com\/ac101");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>LSE Department of Accounting | AC101 Summer School 2026 | Management Accounting and Data-Driven Decision Making</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

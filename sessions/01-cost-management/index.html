@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Dr Furkan Çetin">
+<meta name="dcterms.date" content="2026-07-17">
+
+<title>Session 1 — Cost Management – AC101 — Management Accounting and Data-Driven Decision Making</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ef683187e0e68ee1592ce1d995d44e5e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-2ade7b570da940105670a9c06e8385f5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">AC101 — Management Accounting and Data-Driven Decision Making</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-sessions" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Sessions</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-sessions">    
+        <li>
+    <a class="dropdown-item" href="../../sessions/01-cost-management/index.html">
+ <span class="dropdown-text">1: Cost Management</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../sessions/02-cost-estimation/index.html">
+ <span class="dropdown-text">2: Cost Estimation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../sessions/03-cost-allocation/index.html">
+ <span class="dropdown-text">3: Cost Allocation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../sessions/04-decision-making/index.html">
+ <span class="dropdown-text">4: Decision Making</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../sessions/05-variance/index.html">
+ <span class="dropdown-text">5: Variance Analysis</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../data.html"> 
+<span class="menu-text">Data</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sec-act1" id="toc-sec-act1" class="nav-link active" data-scroll-target="#sec-act1">What is accounting, and why care?</a>
+  <ul class="collapse">
+  <li><a href="#accounting-the-information-system-of-a-business" id="toc-accounting-the-information-system-of-a-business" class="nav-link" data-scroll-target="#accounting-the-information-system-of-a-business">Accounting: the information system of a business</a>
+  <ul class="collapse">
+  <li><a href="#the-foundation-a-l-e" id="toc-the-foundation-a-l-e" class="nav-link" data-scroll-target="#the-foundation-a-l-e">The foundation: A = L + E</a></li>
+  </ul></li>
+  <li><a href="#two-very-different-kinds-of-accounting" id="toc-two-very-different-kinds-of-accounting" class="nav-link" data-scroll-target="#two-very-different-kinds-of-accounting">Two very different kinds of accounting</a></li>
+  </ul></li>
+  <li><a href="#sec-act2" id="toc-sec-act2" class="nav-link" data-scroll-target="#sec-act2">Reading Tesla’s costs</a>
+  <ul class="collapse">
+  <li><a href="#cost-of-what-the-cost-object" id="toc-cost-of-what-the-cost-object" class="nav-link" data-scroll-target="#cost-of-what-the-cost-object">“Cost of what?” — the cost object</a></li>
+  <li><a href="#classification-1-by-behaviour-how-does-profit-move-with-volume" id="toc-classification-1-by-behaviour-how-does-profit-move-with-volume" class="nav-link" data-scroll-target="#classification-1-by-behaviour-how-does-profit-move-with-volume">Classification 1 — by behaviour: <em>how does profit move with volume?</em></a>
+  <ul class="collapse">
+  <li><a href="#the-twist-that-trips-everyone-per-unit-behaviour" id="toc-the-twist-that-trips-everyone-per-unit-behaviour" class="nav-link" data-scroll-target="#the-twist-that-trips-everyone-per-unit-behaviour">The twist that trips everyone: per-unit behaviour</a></li>
+  </ul></li>
+  <li><a href="#classification-2-by-traceability-what-does-this-product-cost" id="toc-classification-2-by-traceability-what-does-this-product-cost" class="nav-link" data-scroll-target="#classification-2-by-traceability-what-does-this-product-cost">Classification 2 — by traceability: <em>what does this product cost?</em></a></li>
+  <li><a href="#putting-both-together-the-22" id="toc-putting-both-together-the-22" class="nav-link" data-scroll-target="#putting-both-together-the-22">Putting both together — the 2×2</a></li>
+  <li><a href="#hands-on-map-teslas-costs" id="toc-hands-on-map-teslas-costs" class="nav-link" data-scroll-target="#hands-on-map-teslas-costs">Hands-on — map Tesla’s costs</a></li>
+  </ul></li>
+  <li><a href="#sec-act3" id="toc-sec-act3" class="nav-link" data-scroll-target="#sec-act3">So, are we making money on the Model Y?</a>
+  <ul class="collapse">
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">Key takeaways</a></li>
+  <li><a href="#coming-next-session-2" id="toc-coming-next-session-2" class="nav-link" data-scroll-target="#coming-next-session-2">Coming next → Session 2</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Session 1 — Cost Management</h1>
+<p class="subtitle lead">What is accounting — and what does it really cost to make a Tesla?</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dr Furkan Çetin </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 17, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><a href="https://colab.research.google.com/github/fmcetin/ac101/blob/gh-pages/notebooks/ac101-s01.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open in Colab"></a> <em>— open today’s notebook in your browser and run along (no install needed)</em></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Your mission this week
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You’re a financial analyst, and your job is to <strong>build a complete cost analysis of Tesla’s manufacturing</strong> — by Friday you present it to the CFO. Each session adds a layer. Today we lay the foundation: <em>what costs even are</em>, and how to read them.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>The case — <em>Five Days at Fremont: What Does a Tesla Really Cost?</em> — <a href="tesla-case-part-a.pdf">Part A (PDF)</a>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The whole of Part 1 is one integrated case — five days at the Fremont factory, one part per session, every exhibit labelled <strong>REAL</strong>, <strong>SIMULATED</strong> or <strong>ESTIMATE</strong>. <strong>We work it in the room</strong>: the lecture teaches the day’s tools first, with worked examples; the part is <strong>read during the hands-on block</strong>; after the break <strong>groups work all of its questions</strong>, and the closing discussion takes <strong>every question, in order, with its full solution</strong>. Every part is on Moodle; each day’s part is posted here after its lecture. Today is <strong>Part A (Monday)</strong> — questions A1–A5 ▸ and the build question A6. The full case is on the course site.</p>
+</div>
+</div>
+<hr>
+<section id="sec-act1" class="level1">
+<h1>What is accounting, and why care?</h1>
+<blockquote class="blockquote">
+<p><strong>Day 1 at your new consulting job.</strong> Tesla’s CFO asks: <em>“Are we making money on the Model Y?”</em> It sounds simple. But to answer it you need to know what “cost” even means — and that’s not as obvious as it looks.</p>
+</blockquote>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Discussion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Turn to the people near you. <strong>What is accounting? What do you think makes <em>management</em> accounting different?</strong> And the honest one: <strong>what do you expect from this course?</strong></p>
+</div>
+</div>
+<section id="accounting-the-information-system-of-a-business" class="level2">
+<h2 class="anchored" data-anchor-id="accounting-the-information-system-of-a-business">Accounting: the information system of a business</h2>
+<p><strong>Accounting</strong> is how an organisation <strong>measures, records, summarises and communicates</strong> its economic activity. Without it, managers fly blind — <em>you can’t manage what you can’t measure.</em> And it is <strong>costly</strong> — systems, people, time. It survives for one reason: the decisions it improves are worth more than it costs. Much of it, in fact, exists for life <em>inside</em> the firm — costing, budgets, standard costs as internal “prices” — rather than for outside investors (Ball 2026, <em>Journal of Accounting and Economics</em>).</p>
+<section id="the-foundation-a-l-e" class="level3">
+<h3 class="anchored" data-anchor-id="the-foundation-a-l-e">The foundation: A = L + E</h3>
+<p>Before management accounting, one equation underlies <em>all</em> accounting. Everything a business <strong>controls</strong> (its assets) was funded either by <strong>borrowing</strong> (liabilities) or by its <strong>owners</strong> (equity):</p>
+<p><span class="math display">\[\text{Assets} = \text{Liabilities} + \text{Equity}\]</span></p>
+<p>It always balances — every pound of resource came from <em>somewhere</em>. Watch it stay balanced as you start a small business:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Predict (show of hands)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Step 3 below spends <strong>£2,000 of the business’s cash on an espresso machine</strong>. Before we run the cell — show of hands: <strong>does the equation still balance? And which side moves?</strong></p>
+</div>
+</div>
+<div id="accounting-equation" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>steps <span class="op">=</span> pd.DataFrame([</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"Put in £5,000 of your own cash"</span>,        <span class="dv">5000</span>,    <span class="dv">0</span>, <span class="dv">5000</span>, <span class="st">"cash 5,000"</span>],</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"...and borrow £3,000 from the bank"</span>,    <span class="dv">8000</span>, <span class="dv">3000</span>, <span class="dv">5000</span>, <span class="st">"cash 8,000"</span>],</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"Buy a £2,000 espresso machine"</span>,         <span class="dv">8000</span>, <span class="dv">3000</span>, <span class="dv">5000</span>, <span class="st">"cash 6,000 + machine 2,000"</span>],</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>], columns<span class="op">=</span>[<span class="st">"Event"</span>, <span class="st">"Assets (£)"</span>, <span class="st">"Liabilities (£)"</span>, <span class="st">"Equity (£)"</span>, <span class="st">"What the assets are"</span>])</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>steps[<span class="st">"Balances? A = L + E"</span>] <span class="op">=</span> steps[<span class="st">"Assets (£)"</span>] <span class="op">==</span> steps[<span class="st">"Liabilities (£)"</span>] <span class="op">+</span> steps[<span class="st">"Equity (£)"</span>]</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(steps.to_string(index<span class="op">=</span><span class="va">False</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                             Event  Assets (£)  Liabilities (£)  Equity (£)        What the assets are  Balances? A = L + E
+    Put in £5,000 of your own cash        5000                0        5000                 cash 5,000                 True
+...and borrow £3,000 from the bank        8000             3000        5000                 cash 8,000                 True
+     Buy a £2,000 espresso machine        8000             3000        5000 cash 6,000 + machine 2,000                 True</code></pre>
+</div>
+</div>
+<p>Buying the machine just <em>swaps</em> one asset (cash) for another (equipment) — total assets, and the equation, don’t move.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>▸ The machinery underneath: T-accounts (a first look)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>How do accountants <em>record</em> those three events so the equation can never break? Every account gets a <strong>T</strong>: one side for increases, the other for decreases. By centuries-old convention, <strong>assets grow on the left</strong> (a “debit”, Dr) and <strong>liabilities and equity grow on the right</strong> (a “credit”, Cr) — and every transaction posts <strong>equal amounts left and right</strong>, always touching at least two accounts. That is <strong>double-entry bookkeeping</strong>, and it is <em>why</em> A = L + E always balances: every entry adds the same amount to both sides of the network, so the equation can’t break.</p>
+<p>Our espresso start-up again — events <strong>(1)</strong> £5,000 own cash, <strong>(2)</strong> £3,000 loan, <strong>(3)</strong> £2,000 machine:</p>
+<pre><code>       CASH (asset)          EQUIPMENT (asset)      BANK LOAN (liability)     OWNER'S EQUITY
+      Dr    │    Cr            Dr    │    Cr           Dr    │    Cr           Dr    │    Cr
+  (1) 5,000 │              (3) 2,000 │                       │ (2) 3,000             │ (1) 5,000
+  (2) 3,000 │ (3) 2,000              │                       │                       │
+  ──────────┼──────────    ──────────┼──────────      ───────┼──────────      ───────┼──────────
+  bal 6,000 │              bal 2,000 │                       │ bal 3,000             │ bal 5,000</code></pre>
+<p>Check: assets £6,000 + £2,000 = £8,000; liabilities £3,000 + equity £5,000 = £8,000 — the balance is <em>built in</em>, transaction by transaction.</p>
+<p><em>That’s as deep as this course goes — we <strong>use</strong> the numbers rather than book them. But when Session 3 shows a cost “moving into inventory”, this is the machinery doing it.</em></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>One term to get straight: cost vs expense
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A <strong>cost</strong> is a resource you give up to get something. It becomes an <strong>expense</strong> when it’s <em>used up</em> to earn revenue — sometimes straight away (today’s advertising), sometimes later: a machine turns into expense gradually as <strong>depreciation</strong> (spreading the machine’s cost over the years it helps earn revenue); a car’s build cost waits on the shelf as <strong>inventory</strong> and only becomes an expense — “<strong>cost of goods sold</strong>” — when the car is sold. So the same £ can be a <strong>cost (asset) now and an expense later</strong> — keep the two ideas distinct.</p>
+</div>
+</div>
+<div id="cell-plot-cost-journey" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/plot-cost-journey-output-1.png" id="plot-cost-journey" width="1335" height="420" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><em>A cost becomes an expense when it’s used up — instantly (advertising), gradually (depreciation), or <strong>only when sold</strong> (inventory → cost of goods sold). Session 3 leans hard on that third lane.</em></p>
+<p>The same firm keeps <strong>three sets of books</strong> — three <em>views</em> of the same reality for three audiences — financial (for outsiders), management (for insiders), and tax (for the authorities). Tesla’s shareholders read <em>“FY2024 revenue $97.7bn, cost of revenues $80.2bn, operating income $7.1bn”</em>; Tesla’s plant manager reads <em>“shave 10% off battery-cell cost and we save ~$500 a car.”</em> Both true; different jobs.</p>
+</section>
+</section>
+<section id="two-very-different-kinds-of-accounting" class="level2">
+<h2 class="anchored" data-anchor-id="two-very-different-kinds-of-accounting">Two very different kinds of accounting</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Aspect</th>
+<th><strong>Financial accounting</strong></th>
+<th><strong>Management accounting</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Audience</td>
+<td>External (investors, lenders, regulators)</td>
+<td>Internal (managers, you)</td>
+</tr>
+<tr class="even">
+<td>Purpose</td>
+<td>Stewardship &amp; compliance</td>
+<td>Decisions &amp; control</td>
+</tr>
+<tr class="odd">
+<td>Rules</td>
+<td>Standardised (GAAP, IFRS)</td>
+<td>Flexible — whatever helps the decision</td>
+</tr>
+<tr class="even">
+<td>Time focus</td>
+<td>Backward (what happened)</td>
+<td>Forward (what should we do)</td>
+</tr>
+<tr class="odd">
+<td>Frequency</td>
+<td>Quarterly, annually</td>
+<td>Whenever a decision needs it</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Discussion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Tesla wants to <strong>borrow $5bn</strong> from a bank; separately, a Tesla manager must <strong>decide the Model Y’s price</strong>. Which kind of accounting does each need — and why?</p>
+</div>
+</div>
+<p>And here is why the internal kind matters so much — <strong>Herbert Simon’s thought experiment</strong>: a Martian points a telescope at Earth, with organisations showing up as green areas and market transactions as thin red lines. The Martian sees mostly <em>green</em> — it would never call this a “market economy”. Inside the green there are no market prices to guide decisions; what firms use instead is management accounting.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>This course is about the second one
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Financial accounting is <em>required by law</em>. Management accounting is <em>chosen</em> by managers because it helps them run the business. It serves three jobs — <strong>planning</strong> (“what should we do?”), <strong>decisions</strong> (“which option is better?”), and <strong>control</strong> (“did we hit the plan?”) — and they map onto your week:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Session</th>
+<th>Job</th>
+<th>Question</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1 · Cost Management</td>
+<td>foundation</td>
+<td>what <em>are</em> our costs?</td>
+</tr>
+<tr class="even">
+<td>2 · Cost Estimation</td>
+<td>planning</td>
+<td>how do costs change with volume?</td>
+</tr>
+<tr class="odd">
+<td>3 · Cost Allocation</td>
+<td>decisions</td>
+<td>which products are profitable?</td>
+</tr>
+<tr class="even">
+<td>4 · Decision Making</td>
+<td>decisions</td>
+<td>which costs matter for <em>this</em> call?</td>
+</tr>
+<tr class="odd">
+<td>5 · Variance Analysis</td>
+<td>control</td>
+<td>did we hit the target?</td>
+</tr>
+<tr class="even">
+<td>6 · Integration &amp; Review</td>
+<td>all three</td>
+<td>can you run the whole toolkit — on a firm you have never seen?</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Accounting numbers help run a business in <strong>two different ways</strong> — and the course’s two halves split along that line. <strong>Part 1 (Dr Çetin)</strong> is about numbers that help you <em>decide</em>: what does a Model Y cost, should we cut its price, make the part or buy it. <strong>Part 2 (Dr Timmermans)</strong> is about numbers that help you <em>steer people</em>: targets, budgets, bonuses, performance evaluation. The formal names are <strong>decision-facilitating</strong> and <strong>decision-influencing</strong> (Demski &amp; Feltham 1976) — and neither works alone: good numbers nobody acts on are wasted, and targets built on bad numbers backfire.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>▸ Does management accounting actually matter? (the research)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Bloom, Eifert, Mahajan, McKenzie &amp; Roberts (<em>“Does Management Matter? Evidence from India”</em>, QJE 2013) ran a randomised trial in Indian textile firms: those given better management practices (much of it basic management accounting — measuring, monitoring, target-setting) raised productivity by <strong>~17%</strong>. The “soft” toolkit you’re learning has hard, causal effects on firm performance. <em>(Notice the trial bundles both roles — measurement to</em> facilitate <em>decisions and target-setting to</em> influence <em>behaviour.)</em></p>
+</div>
+</div>
+</div>
+<p>Back to the CFO. The question is about <strong>cost</strong> — but the first thing a good analyst asks is: <em>cost of <strong>what</strong>?</em></p>
+<hr>
+<p><em>(Natural break point — ~10 minutes.)</em></p>
+<hr>
+</section>
+</section>
+<section id="sec-act2" class="level1">
+<h1>Reading Tesla’s costs</h1>
+<section id="cost-of-what-the-cost-object" class="level2">
+<h2 class="anchored" data-anchor-id="cost-of-what-the-cost-object">“Cost of what?” — the cost object</h2>
+<p>A <strong>cost object</strong> is anything you want the cost <em>of</em>: a product (Model Y), a department (the Fremont factory), a customer (a fleet buyer), a project (Cybertruck development). The same factory cost is “direct” to the factory but “indirect” to a single car — two terms we’ll define properly in a few minutes — so you must fix the cost object <em>first</em>.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>One idea to carry all week
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The “cost” of something <strong>depends on the question</strong>. The cost of a Model Y for <em>financial reporting</em> (an average) differs from its cost for <em>pricing</em> (incremental) and for <em>make-or-buy</em> (avoidable). Hold onto this — it returns every session.</p>
+</div>
+</div>
+<p>We classify costs two ways, and <strong>each answers a different manager’s question.</strong></p>
+</section>
+<section id="classification-1-by-behaviour-how-does-profit-move-with-volume" class="level2">
+<h2 class="anchored" data-anchor-id="classification-1-by-behaviour-how-does-profit-move-with-volume">Classification 1 — by behaviour: <em>how does profit move with volume?</em></h2>
+<ul>
+<li><strong>Variable costs</strong> change <em>in total</em> as volume changes (battery cells: more cars, more cells).</li>
+<li><strong>Fixed costs</strong> stay the same <em>in total</em> across a sensible range of volume — accountants call this the <strong>relevant range</strong> (factory insurance: the same premium at 400k or 500k cars).</li>
+</ul>
+<div id="cell-fig-behaviour" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div id="fig-behaviour" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-behaviour-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-behaviour-output-1.png" width="1785" height="525" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-behaviour-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Variable, fixed and total cost — in total. Illustrative round numbers to show the shapes — not Tesla’s actuals; Session 2 estimates the real ones from Tesla’s quarterly data (Compustat).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>▸ Outside the relevant range
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The “fixed” label is only guaranteed <em>inside</em> the relevant range. Push volume far enough beyond it and fixed costs <strong>step up</strong> (a second assembly line, new premises) and variable costs <strong>bend</strong> (overtime, bottlenecks); fall far below it and each car <strong>costs far more to build</strong> — an underused plant, a crew still finding its rhythm on the line. The left panel’s fixed-cost steps land in total cost as <strong>jumps at both edges of the range</strong>, and the straight line’s <strong>intercept</strong> is <em>not</em> the true cost at zero volume — the low band runs on <strong>$2.4bn</strong> of fixed cost, not the extrapolated $3.0bn. Every fixed/variable call carries an implicit volume range — check it before you rely on it.</p>
+<div id="cell-fig-relevant-range" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div id="fig-relevant-range" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-relevant-range-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-relevant-range-output-1.png" width="1323" height="495" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-relevant-range-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Outside the relevant range the linear model fails on both sides: fixed cost steps between capacity bands (left), and both steps land in total cost as jumps — $0.6bn at 200k, $0.8bn at 500k (right). Below the range the first cars cost far more each (the concave start-up bow), and the curve runs on the low band’s $2.4bn of fixed cost: the line’s $3.0bn intercept is not the true cost at zero volume. Illustrative numbers — the same $3bn / $20k per car inside the range as above.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="the-twist-that-trips-everyone-per-unit-behaviour" class="level3">
+<h3 class="anchored" data-anchor-id="the-twist-that-trips-everyone-per-unit-behaviour">The twist that trips everyone: per-unit behaviour</h3>
+<p>Flip to <em>per car</em> and the pattern inverts — and this is a classic beginner trap:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Total</th>
+<th><strong>Per unit</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Variable cost</td>
+<td>rises with volume</td>
+<td><strong>constant</strong></td>
+</tr>
+<tr class="even">
+<td>Fixed cost</td>
+<td>constant</td>
+<td><strong>falls with volume</strong></td>
+</tr>
+</tbody>
+</table>
+<div id="unit-cost-trap" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>fixed <span class="op">=</span> <span class="dv">3_000_000_000</span>           <span class="co"># $3bn fixed — same illustrative number as the plot above, not Tesla's actual</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> (<span class="dv">300_000</span>, <span class="dv">500_000</span>):</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  At </span><span class="sc">{</span>n<span class="sc">:,}</span><span class="ss"> cars: fixed cost per car = $</span><span class="sc">{</span>fixed<span class="op">/</span>n<span class="sc">:,.0f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  At 300,000 cars: fixed cost per car = $10,000
+  At 500,000 cars: fixed cost per car = $6,000</code></pre>
+</div>
+</div>
+<p>Same $3bn — but “per car” it slid from <strong>$10,000 to $6,000</strong>. “Fixed cost per unit” is an <strong>artificial</strong> number: it depends on a volume you pick.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Your turn (then check)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You’re the analyst. At 300,000 cars the accountants report a <strong>full unit cost of $30,000 per car</strong> ($20,000 variable + the $10,000 fixed-per-car figure we just computed). The CFO asks for the <strong>total cost budget at 500,000 cars</strong>. In pairs: <strong>compute it and commit to a number</strong> before we run the next cell.</p>
+</div>
+</div>
+<div id="unit-cost-trap-reveal" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>budget_wrong <span class="op">=</span> (fixed<span class="op">/</span><span class="dv">300_000</span> <span class="op">+</span> <span class="dv">20_000</span>) <span class="op">*</span> <span class="dv">500_000</span> <span class="op">/</span> <span class="fl">1e9</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>budget_right <span class="op">=</span> (<span class="dv">20_000</span> <span class="op">*</span> <span class="dv">500_000</span> <span class="op">+</span> fixed) <span class="op">/</span> <span class="fl">1e9</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  Budget 500k cars using the 300k unit cost: $</span><span class="sc">{</span>budget_wrong<span class="sc">:,.1f}</span><span class="ss">bn  ← WRONG"</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  Correct (variable per car + total fixed):   $</span><span class="sc">{</span>budget_right<span class="sc">:,.1f}</span><span class="ss">bn  ← think in TOTALS"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Budget 500k cars using the 300k unit cost: $15.0bn  ← WRONG
+  Correct (variable per car + total fixed):   $13.0bn  ← think in TOTALS</code></pre>
+</div>
+</div>
+<p>Where did the $30,000 come from? It was a <em>correct</em> total-cost build at 300,000 cars — $3.0bn fixed + $20,000 × 300,000 = $9.0bn; ÷ 300,000 = $30,000 a car. Correct arithmetic, frozen at one volume — the error is only in <em>scaling</em> it.</p>
+<p><strong>The trap:</strong> never budget by scaling a <strong>full</strong> unit cost (fixed cost baked in) to a new volume. A purely <em>variable</em> unit cost is fine to scale.</p>
+<div id="cell-fig-unit-cost-picture" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-display">
+<div id="fig-unit-cost-picture" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-unit-cost-picture-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-unit-cost-picture-output-1.png" width="1336" height="525" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-unit-cost-picture-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: The trap, drawn: the frozen $10,000 figure understates fixed cost per car below 300k cars and overstates it above — at 500k the $4,000-a-car gap is the $2bn phantom in the budget.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Misconception check
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“Fixed cost per unit” feels like a real per-car number you can add to variable cost and scale up. It isn’t — total fixed cost is flat; the per-unit figure is just that flat number divided by whatever volume you chose. <strong>For decisions, think in total costs, not unit costs.</strong> And two names worth keeping: a per-unit figure built by division is an <strong>average cost</strong>; the extra cost of one more car is its <strong>marginal cost</strong>. Session 2 leans on the first; Session 4 runs on the second.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="classification-2-by-traceability-what-does-this-product-cost" class="level2">
+<h2 class="anchored" data-anchor-id="classification-2-by-traceability-what-does-this-product-cost">Classification 2 — by traceability: <em>what does this product cost?</em></h2>
+<ul>
+<li><strong>Direct costs</strong> can be traced to the cost object economically (the battery pack in <em>this</em> Model Y).</li>
+<li><strong>Indirect costs (overhead)</strong> can’t be — they’re shared and must be <strong>allocated</strong> (the factory manager’s salary covers Y, 3, S and X). <em>How</em> to allocate is the whole of Session 3.</li>
+</ul>
+<div id="cell-fig-cost-assignment" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-display">
+<div id="fig-cost-assignment" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cost-assignment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-cost-assignment-output-1.png" width="1335" height="465" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cost-assignment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: How a cost reaches one Model Y: direct costs are traced; overhead is allocated by a rule. The allocation arrow is the whole of Session 3.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>▸ Why these distinctions run the modern economy
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Software is the extreme cost structure: <strong>huge fixed cost to build, near-zero variable cost to serve one more user</strong>. De Ridder (2024, “Market Power and Innovation in the Intangible Economy”, <em>American Economic Review</em> 114(1), 199–251 — LSE Economics) shows that as intangibles spread, this cost structure alone can explain rising markups, fewer new challengers entering, and slower productivity growth. And because ever more cost is <strong>indirect</strong> — shared software, data, R&amp;D — “what does <em>this</em> product cost?” keeps getting harder to answer. That question is Session 3.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="putting-both-together-the-22" class="level2">
+<h2 class="anchored" data-anchor-id="putting-both-together-the-22">Putting both together — the 2×2</h2>
+<p>Every cost sits on <strong>both</strong> dimensions at once. The four corners, with a memorable example each:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Direct</strong></th>
+<th><strong>Indirect</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Variable</strong></td>
+<td><strong>iPhone screen</strong> — we know which phone it goes in (direct), and one more phone needs one more screen (variable)</td>
+<td><strong>Plant electricity</strong> for a factory making several models — scales with output (variable) but billed to the plant, not a model (indirect)</td>
+</tr>
+<tr class="even">
+<td><strong>Fixed</strong></td>
+<td><strong>Galaxy-S-only ad campaign</strong> — for that model alone (direct), pre-committed regardless of units (fixed)</td>
+<td><strong>Tesla battery R&amp;D</strong> — benefits several models (indirect), pre-committed regardless of cars built (fixed)</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cost</th>
+<th>Behaviour</th>
+<th>Traceability</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Lithium for battery cells</td>
+<td>Variable</td>
+<td>Direct</td>
+<td>scales with cars; traceable to each</td>
+</tr>
+<tr class="even">
+<td>Assembly-line wages</td>
+<td>Variable</td>
+<td>Direct</td>
+<td>paid per hour on specific cars</td>
+</tr>
+<tr class="odd">
+<td>Fremont factory electricity</td>
+<td>Variable</td>
+<td>Indirect</td>
+<td>scales with output; shared across models</td>
+</tr>
+<tr class="even">
+<td>Fremont building depreciation</td>
+<td>Fixed</td>
+<td>Indirect</td>
+<td>wears with time, not volume; shared</td>
+</tr>
+<tr class="odd">
+<td>Model-Y-only stamping dies</td>
+<td>Fixed</td>
+<td>Direct</td>
+<td>dedicated to Model Y; volume-independent</td>
+</tr>
+<tr class="even">
+<td>Elon Musk’s pay</td>
+<td>Fixed</td>
+<td>Indirect</td>
+<td>volume-independent; benefits everything</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Your turn — classify ten costs (then reveal)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Cost object: <strong>one Model Y.</strong> For each, mark <strong>F/V</strong> and <strong>D/I</strong>, with a one-line reason.</p>
+<ol type="1">
+<li>Paint and coatings · 2. Fremont property tax · 3. Tyres · 4. Welding gas &amp; machine lubricants (used across all models) · 5. Depreciation on Model-Y-only welding robots · 6. Plant manager’s salary · 7. Shipping to the customer · 8. Quality-inspector salary · 9. Aluminium for body panels · 10. Factory canteen</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Reveal
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Cost</th>
+<th>F/V</th>
+<th>D/I</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Paint &amp; coatings</td>
+<td>V</td>
+<td>D</td>
+<td>more cars → more paint; goes onto specific cars</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Property tax</td>
+<td>F</td>
+<td>I</td>
+<td>volume-independent; shared</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Tyres</td>
+<td>V</td>
+<td>D</td>
+<td>more cars → more tyres; fitted to specific cars</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Welding gas &amp; lubricants</td>
+<td>V</td>
+<td>I</td>
+<td>scales with output; not worth tracing to one car</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Model-Y-only robots (depreciation)</td>
+<td>F</td>
+<td>D</td>
+<td>machines build only Model Ys; depreciation doesn’t move with volume</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Plant manager’s salary</td>
+<td>F</td>
+<td>I</td>
+<td>salaried regardless of volume; oversees all models</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Shipping to customer</td>
+<td>V</td>
+<td>D</td>
+<td>per delivery; traceable</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Inspector salary</td>
+<td>F</td>
+<td>I</td>
+<td>fixed salary; inspects all models</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Aluminium</td>
+<td>V</td>
+<td>D</td>
+<td>more cars → more metal; into specific cars</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Factory canteen</td>
+<td>F</td>
+<td>I</td>
+<td>runs whatever the volume; feeds staff on every line</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="hands-on-map-teslas-costs" class="level2">
+<h2 class="anchored" data-anchor-id="hands-on-map-teslas-costs">Hands-on — map Tesla’s costs</h2>
+<p>Enough illustrative numbers — this is Tesla’s FY2024 income statement, straight from <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0001318605&amp;type=10-K">the 10-K</a>. One acronym before we run it: <strong>SG&amp;A</strong> — selling, general and administrative — the head-office and sales machine (showrooms, marketing, admin salaries).</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Predict (quick guesses)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before the cell runs: <strong>which cost line will be biggest?</strong> And of every $100 of revenue, <strong>how much survives to operating income</strong> — $50? $20? $5?</p>
+</div>
+</div>
+<div id="cost-map" class="cell" data-execution_count="10">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>annual <span class="op">=</span> pd.read_csv(<span class="st">'../../data/raw/tesla_annual_2024.csv'</span>).set_index(<span class="st">'item'</span>)[<span class="st">'amount_millions'</span>]</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>cost_rev, sga, rd <span class="op">=</span> annual[<span class="st">'cost_of_revenues'</span>], annual[<span class="st">'selling_general_admin'</span>], annual[<span class="st">'research_and_development'</span>]</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"TESLA FY2024 income statement ($ billions, from the 10-K)"</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  Revenue                 </span><span class="sc">{</span>annual[<span class="st">'total_revenue'</span>]<span class="op">/</span><span class="dv">1000</span><span class="sc">:6.2f}</span><span class="ss">"</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  − Cost of revenues      </span><span class="sc">{</span>cost_rev<span class="op">/</span><span class="dv">1000</span><span class="sc">:6.2f}</span><span class="ss">"</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  = Gross profit          </span><span class="sc">{</span>annual[<span class="st">'gross_profit'</span>]<span class="op">/</span><span class="dv">1000</span><span class="sc">:6.2f}</span><span class="ss">"</span>)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  − SG&amp;A                  </span><span class="sc">{</span>sga<span class="op">/</span><span class="dv">1000</span><span class="sc">:6.2f}</span><span class="ss">"</span>)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  − R&amp;D                   </span><span class="sc">{</span>rd<span class="op">/</span><span class="dv">1000</span><span class="sc">:6.2f}</span><span class="ss">"</span>)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  − Restructuring/other   </span><span class="sc">{</span>annual[<span class="st">'restructuring_and_other'</span>]<span class="op">/</span><span class="dv">1000</span><span class="sc">:6.2f}</span><span class="ss">"</span>)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  = Operating income      </span><span class="sc">{</span>annual[<span class="st">'operating_income'</span>]<span class="op">/</span><span class="dv">1000</span><span class="sc">:6.2f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>TESLA FY2024 income statement ($ billions, from the 10-K)
+  Revenue                  97.69
+  − Cost of revenues       80.24
+  = Gross profit           17.45
+  − SG&amp;A                    5.15
+  − R&amp;D                     4.54
+  − Restructuring/other     0.68
+  = Operating income        7.08</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Discussion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>From the numbers above: work out <strong>cost of revenues</strong> and <strong>gross profit</strong> as a <strong>% of revenue</strong>. Then we draw the picture. <em>(Which of the three big cost lines you would attack first — and why — is the case’s first question, at the end of the session. Hold that thought.)</em></p>
+</div>
+</div>
+<div id="cell-fig-cost-map" class="cell" data-execution_count="11">
+<div class="cell-output cell-output-display">
+<div id="fig-cost-map" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cost-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-cost-map-output-1.png" width="1335" height="525" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cost-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Where Tesla’s money goes (FY2024).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Cost of revenues dominates. But the published accounts stop there — they won’t tell you how much of that $80.2bn is <em>fixed</em> vs <em>variable</em>, or how much belongs to a <em>Model Y</em> vs a <em>Model X</em>. Recovering that is the rest of your week (Sessions 2 and 3).</p>
+<p>Then, still in the jump-out: <strong>read Part A</strong> of <a href="tesla-case-part-a.pdf"><em>Five Days at Fremont</em></a> — it re-tells this morning as your first day on Tesla’s finance team, exhibits included, no answers. Its questions are worked in groups after the break, and every one is discussed with its full solution.</p>
+<hr>
+<p><em>(Break — ~10 minutes. The closing block — the case questions in groups, then the discussion with every solution — is ~40 minutes.)</em></p>
+<hr>
+</section>
+</section>
+<section id="sec-act3" class="level1">
+<h1>So, are we making money on the Model Y?</h1>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Discussion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Back to the CFO. In your groups, draft a <strong>two-sentence answer</strong>: are we making money on the Model Y? Use anything from today — the cost map, the 2×2, the unit-cost trap.</p>
+</div>
+</div>
+<p>Start with what you <em>can</em> say. <strong>Tesla as a whole made money in 2024</strong>: gross profit ≈ <strong>$17.5bn</strong> and operating income ≈ <strong>$7.1bn</strong> — straight off the income statement you mapped earlier. But the CFO didn’t ask about Tesla as a whole — the question was the <strong>Model Y</strong>, and that needs a cost <em>for the Model Y</em>. You can now build a <strong>cost map</strong> — but notice the catch that runs the rest of the course:</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>The honest answer (and the hook)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You <em>can</em> total up a cost for the Model Y. But <strong>which</strong> cost? The full average (with allocated factory and R&amp;D)? The extra cost of one more car? The cost you’d <em>avoid</em> by not making it? Each answers a different decision — and they’re different numbers. The cost map is the foundation; <strong>the right cost depends on the question</strong>, which is exactly what Sessions 2–5 work through.</p>
+</div>
+</div>
+<section id="key-takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="key-takeaways">Key takeaways</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Key takeaways
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>Accounting</strong> measures, records and communicates economic activity; underneath it all, <strong>A = L + E</strong> always balances.</li>
+<li><strong>Financial</strong> accounting serves outsiders (standardised, backward-looking); <strong>management</strong> accounting serves insiders (flexible, forward-looking) for planning, decisions and control.</li>
+<li>A <strong>cost object</strong> comes first — <em>“cost of what?”</em> — and the right cost <strong>depends on the question</strong>.</li>
+<li><strong>Behaviour</strong> (fixed/variable) answers <em>“how does profit move with volume?”</em>; <strong>traceability</strong> (direct/indirect) answers <em>“what does this product cost?”</em></li>
+<li><strong>Fixed cost per unit is an artificial number</strong> — for decisions, think in <em>total</em> costs.</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Tesla case — Part A
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In the lecture we read <strong>Part A (“Monday: cost of <em>what</em>?”)</strong> of <a href="../../five-days-at-fremont.pdf"><em>Five Days at Fremont</em></a> — the handout is on Moodle — worked all of its questions in groups, and debriefed every one with its full solution: <strong>A1</strong> (cost of revenues is 82.1% of revenue — roughly 16× SG&amp;A and 18× R&amp;D, so a 1% improvement, ~$802m, beats the whole $684m restructuring line); <strong>A2</strong> (the ten costs on the 2×2 — the classification table above); <strong>A3</strong> (the December-built, January-sold Model Y waits as <strong>inventory</strong> and hits profit as <strong>cost of goods sold</strong> in January); <strong>A4</strong> (the memo’s $15.0bn vs the correct $13.0bn — a $2.0bn phantom from scaling a full unit cost); <strong>A5 ▸</strong> (full average, incremental, avoidable — three costs, three decisions); <strong>A6</strong> (Exhibit A-4 — the variable build cost of one Model Y is <strong>$31,500</strong>; put the fixed factory-overhead row back, $4,000 a car, and the <em>full</em> build cost is <strong>$35,500</strong>).</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>▸ The bridge to Session 2
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Total cost is a <strong>linear cost function</strong>: <span class="math inline">\(\text{Total Cost} = \text{Fixed} + \text{Variable per car}\times\text{cars}\)</span>, i.e.&nbsp;<span class="math inline">\(Y = a + bX\)</span>. Today we <em>named</em> <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>. Tomorrow’s problem: Tesla’s accounts don’t hand you <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> — you have to <strong>estimate</strong> them from data.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="coming-next-session-2" class="level2">
+<h2 class="anchored" data-anchor-id="coming-next-session-2">Coming next → Session 2</h2>
+<p>Tesla cut Model Y prices repeatedly — including a <strong>$13,000</strong> cut in a single day in January 2023. So: <strong>how does cost change with volume — and at the lower price, do they still make money on every car?</strong> Tomorrow we estimate Tesla’s cost function from real data and find its break-even. <em>Bring your laptop.</em></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/fmcetin\.com\/ac101");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>LSE Department of Accounting | AC101 Summer School 2026 | Management Accounting and Data-Driven Decision Making</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

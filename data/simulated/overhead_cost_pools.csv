@@ -1,0 +1,6 @@
+cost_pool,annual_cost_millions,cost_driver,driver_unit,notes
+assembly,2400,assembly_hours,hours,Direct labor hours in final assembly
+battery_systems,3200,kwh_capacity,kWh,Battery capacity per vehicle - major cost driver
+quality_testing,800,test_cycles,cycles,Number of quality test cycles per vehicle
+logistics,1200,shipments,vehicles,Number of vehicles shipped/delivered
+facilities,1600,facility_floor,vehicle,Facility-level floor space - allocated per vehicle by volume (a proxy; not a true square-foot driver)

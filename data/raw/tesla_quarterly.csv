@@ -1,0 +1,13 @@
+quarter,year,revenue_millions,cogs_millions,sga_millions,rd_millions,production,deliveries,source,notes
+Q1,2023,23329,17772,1847,771,440808,422875,Compustat,
+Q2,2023,24927,19240,2134,943,479700,466140,Compustat,
+Q3,2023,23350,17937,2414,1161,430488,435059,Compustat,
+Q4,2023,25167,19497,2374,1094,494989,484507,Compustat,
+Q1,2024,21301,16359,2525,1151,433371,386810,Compustat,Weak demand quarter
+Q2,2024,25500,19644,2351,1074,410831,443956,Compustat,
+Q3,2024,25182,18837,2225,1039,469796,462890,Compustat,
+Q4,2024,25707,20032,2589,1276,459445,495570,Compustat,
+Q1,2025,19340,16190,,,362615,336681,Tesla IR,Financials estimated from prior Gemini search
+Q2,2025,22500,18520,,,410244,384122,Tesla IR,Financials estimated from prior Gemini search
+Q3,2025,28100,23110,,,447450,497099,Tesla IR,Financials estimated from prior Gemini search
+Q4,2025,,,,,434358,418227,Tesla IR,Financials not yet reported (as of Jan 2026)

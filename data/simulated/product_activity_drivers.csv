@@ -1,0 +1,6 @@
+model,annual_volume_fremont,assembly_hours_per_unit,kwh_capacity,test_cycles_per_unit,avg_price_usd,direct_materials_per_unit,notes
+Model_Y,650000,12,75,3,44000,18000,High volume - primary Fremont product
+Model_3,500000,10,60,3,39000,15000,High volume
+Model_S,20000,18,100,5,89000,28000,Low volume - premium
+Model_X,20000,20,100,5,99000,32000,Low volume - premium SUV
+Cybertruck,40000,25,123,6,80000,35000,Ramping production

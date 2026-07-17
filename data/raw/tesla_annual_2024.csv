@@ -1,0 +1,9 @@
+item,amount_millions,source,notes
+total_revenue,97690,SEC 10-K FY2024,Total revenues
+cost_of_revenues,80240,SEC 10-K FY2024,Total cost of revenues (automotive + energy + services)
+gross_profit,17450,Derived,total_revenue - cost_of_revenues
+research_and_development,4540,SEC 10-K FY2024,
+selling_general_admin,5150,SEC 10-K FY2024,
+restructuring_and_other,684,SEC 10-K FY2024,
+total_operating_expenses,10374,Derived,R&D + SG&A + restructuring
+operating_income,7076,SEC 10-K FY2024,Income from operations

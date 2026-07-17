@@ -1,0 +1,8 @@
+item,budget,actual,variance,notes
+production_units,480000,459445,-20555,Below target
+deliveries,500000,495570,-4430,Slightly below
+revenue_per_car_delivered,52000,51900,-100,Revenue-per-car pressure (mix/pricing)
+direct_materials_per_unit,18000,18500,500,Unfavorable - input-price spike (simulated scenario)
+direct_labor_per_unit,4500,4200,-300,Favorable - efficiency gains
+variable_overhead_per_unit,6000,6100,100,Unfavorable
+fixed_costs_millions,9750,9800,50,Unfavorable - capacity costs (pot is ALL fixed costs incl. R&D and SG&A)
